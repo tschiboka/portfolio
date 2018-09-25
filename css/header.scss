@@ -1,0 +1,34 @@
+@import "_vars_and_functions";
+header {
+  height: 20vw;
+  background: rgba(0, 0, 0, 0.3);
+  @include breakpoint(xs) {
+    height: 150px;
+  }
+  @include breakpoint(sm) {
+    height: 200px;
+  }
+  @include breakpoint(md) {
+    height: 250px;
+  }
+  @include breakpoint(lg) {
+    height: 290px;
+  }
+  .header__img {
+    background-image: url("../images/bg-header.png");
+    background-size: cover;
+    opacity: 0.01;
+    @include breakpoint(xs) {
+      height: 150px;
+    }
+    @include breakpoint(sm) {
+      height: 200px;
+    }
+    @include breakpoint(md) {
+      height: 250px;
+    }
+    @include breakpoint(lg) {
+      height: 290px;
+    }
+  }
+}

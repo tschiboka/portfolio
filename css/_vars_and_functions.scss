@@ -1,0 +1,28 @@
+@mixin breakpoint($bp) {
+  @if $bp == xs {
+    @media (max-width: 700px) {
+      @content;
+    }
+  } @else if $bp == sm {
+    @media (min-width: 701px) {
+      @content;
+    }
+  } @else if $bp == md {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  } @else if $bp == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @warn "Not a correct mixin attribute. Attributes are: xs, sm, md, lg!";
+  }
+}
+
+@function setColor($color-name) {
+  @return map-get($colors, $color-name);
+}
+$colors: (
+  primary: #282c34
+);
