@@ -1,0 +1,30 @@
+@mixin breakpoint($bp) {
+  @if $bp == xs {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+}
+
+$colors: (
+  primary: #282c34
+);
+
+@function setColor($color-name) {
+  @return map-get($colors, $color-name);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: setColor(primary);
+  header {
+    height: 20vw;
+    background: rgba(0, 0, 0, 0.3);
+    .img {
+      height: 20vw;
+      background-image: url("bg-header.png");
+      background-size: cover;
+      opacity: 0.01;
+    }
+  }
+}
