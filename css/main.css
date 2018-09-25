@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background: #282c34;
 }
 
@@ -9,10 +10,57 @@ body header {
   background: rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 700px) {
+  body header {
+    height: 150px;
+  }
+}
+
+@media (min-width: 701px) {
+  body header {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body header {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body header {
+    height: 290px;
+  }
+}
+
 body header .img {
-  height: 20vw;
   background-image: url("bg-header.png");
   background-size: cover;
   opacity: 0.01;
+}
+
+@media (max-width: 700px) {
+  body header .img {
+    height: 150px;
+  }
+}
+
+@media (min-width: 701px) {
+  body header .img {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body header .img {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body header .img {
+    height: 290px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
