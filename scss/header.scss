@@ -1,4 +1,9 @@
-@import "_vars_and_functions";
+/*
+ * This file contains the styling of the header, and everything it includes
+ * profile picture, background picture ect. 
+ */
+
+@import "_vars_and_functions"; /// this file is imported and used throughout the entire document as a partial
 header {
   height: 20vw;
   background: rgba(0, 0, 0, 0.3);
@@ -14,6 +19,7 @@ header {
   @include breakpoint(lg) {
     height: 290px;
   }
+  // the background image of the header which is faded in with headers bakground color
   .header__img {
     background-image: url("../images/bg-header.png");
     background-size: cover;
@@ -25,7 +31,7 @@ header {
       height: 200px;
     }
     @include breakpoint(md) {
-      height: 250px;
+      height: 240px;
     }
     @include breakpoint(lg) {
       height: 290px;

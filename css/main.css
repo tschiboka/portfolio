@@ -1,3 +1,7 @@
+/*
+ * This file contains the styling of the header, and everything it includes
+ * profile picture, background picture ect. 
+ */
 header {
   height: 20vw;
   background: rgba(0, 0, 0, 0.3);
@@ -59,7 +63,7 @@ header .header__img {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 5;
   height: 100%;
   background: #282c34;
 }

@@ -1,3 +1,7 @@
+/*
+ * This file contains the styling of the header, and everything it includes
+ * profile picture, background picture ect. 
+ */
 header {
   height: 20vw;
   background: rgba(0, 0, 0, 0.3);
@@ -47,7 +51,7 @@ header .header__img {
 
 @media (min-width: 1000px) {
   header .header__img {
-    height: 250px;
+    height: 240px;
   }
 }
 
