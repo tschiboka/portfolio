@@ -24,5 +24,6 @@
   @return map-get($colors, $color-name);
 }
 $colors: (
-  primary: #282c34
+  primary: #282c34,
+  border: #b5b5ff
 );

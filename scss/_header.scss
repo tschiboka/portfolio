@@ -1,0 +1,75 @@
+/*
+ * This file contains the styling of the header, and everything it includes
+ * profile picture, background picture ect. 
+ */
+
+@import "_vars_and_functions"; /// this file is imported and used throughout the entire document as a partial
+header {
+  height: 20vw;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid setColor(border);
+  @include breakpoint(xs) {
+    height: 160px;
+  }
+  @include breakpoint(sm) {
+    height: 200px;
+  }
+  @include breakpoint(md) {
+    height: 250px;
+  }
+  @include breakpoint(lg) {
+    height: 290px;
+  }
+  // the background image of the header which is faded in with headers bakground color
+  .header__img {
+    background-image: url("../images/bg-header.png");
+    background-size: cover;
+    opacity: 0.1;
+    @include breakpoint(xs) {
+      height: 100%;
+    }
+    @include breakpoint(sm) {
+      height: 200px;
+    }
+    @include breakpoint(md) {
+      height: 240px;
+    }
+    @include breakpoint(lg) {
+      height: 290px;
+    }
+  }
+  .header__face {
+    position: absolute;
+    // border half circle
+    border: 2px solid setColor(border);
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+    @include breakpoint(xs) {
+      top: 60px;
+      left: 25%;
+      height: 200px;
+      width: 200px;
+    }
+    @include breakpoint(sm) {
+      top: 85px;
+      left: 50px;
+      height: 230px;
+      width: 230px;
+    }
+
+    .header__face__img {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      background-image: url(../images/face.png);
+      background-size: cover;
+      border-radius: 50%;
+      // rotate back, because parent is rotated
+      transform: rotate(
+        -55deg
+      ); // 55deg is intentional, bacause the img is not fully vertical
+    }
+  }
+}
