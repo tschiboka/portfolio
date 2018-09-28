@@ -8,8 +8,11 @@ header {
   height: 20vw;
   background: rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid setColor(border);
+  @include breakpoint(phone) {
+    height: 120px;
+  }
   @include breakpoint(xs) {
-    height: 160px;
+    height: 150px;
   }
   @include breakpoint(sm) {
     height: 200px;
@@ -35,11 +38,17 @@ header {
     border-top-color: transparent;
     border-left-color: transparent;
     transform: rotate(45deg);
-    @include breakpoint(xs) {
-      top: 60px;
+    @include breakpoint(phone) {
+      top: 45px;
       left: 0;
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
+    }
+    @include breakpoint(xs) {
+      top: 65px;
+      left: 10px;
+      height: 170px;
+      width: 170px;
     }
     @include breakpoint(sm) {
       top: 85px;
