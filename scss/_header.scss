@@ -23,12 +23,17 @@ header {
   @include breakpoint(lg) {
     height: 250px;
   }
-  // the background image of the header which is faded in with headers bakground color
+  // the background image of the header which is clipped
   .header__img {
-    background-image: url("../images/bg-header.png");
+    background-image: url("../images/bg_header.png");
     background-size: cover;
-    opacity: 0.03;
     height: 100%;
+    color: transparent;
+    background-clip: text;
+    .header__img--name {
+      font-size: 50px;
+      text-align: right;
+    }
   }
   .header__face {
     position: absolute;
