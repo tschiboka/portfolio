@@ -9,7 +9,7 @@ header {
   background: rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid setColor(border);
   @include breakpoint(phone) {
-    height: 140px;
+    height: 160px;
   }
   @include breakpoint(xs) {
     height: 150px;
@@ -30,14 +30,21 @@ header {
     background-size: cover;
     background-clip: text;
     color: transparent;
-    font-family: "PassionOne";
+    font-family: "Ghost Army Stencil";
     @include breakpoint(phone) {
       padding-top: 10px;
       text-align: center;
     }
+    @include breakpoint(xs) {
+      padding-right: 30px;
+      text-align: right;
+    }
     .header__img--name {
       @include breakpoint(phone) {
-        font-size: 40px;
+        font-size: 60px;
+      }
+      @include breakpoint(xs) {
+        font-size: 70px;
       }
     }
   }
@@ -50,7 +57,7 @@ header {
     border-left-color: transparent;
     transform: rotate(45deg);
     @include breakpoint(phone) {
-      top: 65px;
+      top: 85px;
       left: 0;
       height: 150px;
       width: 150px;
