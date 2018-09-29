@@ -9,7 +9,7 @@ header {
   background: rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid setColor(border);
   @include breakpoint(phone) {
-    height: 120px;
+    height: 140px;
   }
   @include breakpoint(xs) {
     height: 150px;
@@ -25,14 +25,20 @@ header {
   }
   // the background image of the header which is clipped
   .header__img {
+    height: 100%;
     background-image: url("../images/bg_header.png");
     background-size: cover;
-    height: 100%;
-    color: transparent;
     background-clip: text;
+    color: transparent;
+    font-family: "PassionOne";
+    @include breakpoint(phone) {
+      padding-top: 10px;
+      text-align: center;
+    }
     .header__img--name {
-      font-size: 50px;
-      text-align: right;
+      @include breakpoint(phone) {
+        font-size: 40px;
+      }
     }
   }
   .header__face {
@@ -44,7 +50,7 @@ header {
     border-left-color: transparent;
     transform: rotate(45deg);
     @include breakpoint(phone) {
-      top: 45px;
+      top: 65px;
       left: 0;
       height: 150px;
       width: 150px;
