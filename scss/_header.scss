@@ -26,26 +26,37 @@ header {
   // the background image of the header which is clipped
   .header__img {
     height: 100%;
-    background-image: url("../images/bg_header.png");
-    background-size: cover;
+    /*background-image: url("../images/bg_header.png");
+    background-size: cover;*/
+    background: rgb(232, 57, 134);
+    background: linear-gradient(
+      90deg,
+      rgb(248, 77, 151) 10%,
+      rgb(137, 248, 252) 47%,
+      rgb(110, 255, 175) 100%
+    );
     background-clip: text;
     color: transparent;
     font-family: "Ghost Army Stencil";
+    text-align: right;
     @include breakpoint(phone) {
-      padding-top: 10px;
-      text-align: center;
+      padding: 20px 20px 0 0;
+      line-height: 50px;
     }
     @include breakpoint(xs) {
-      padding-right: 30px;
-      text-align: right;
+      padding: 10px 30px 0 0;
     }
     .header__img--name {
       @include breakpoint(phone) {
-        font-size: 60px;
+        font-size: 50px;
       }
       @include breakpoint(xs) {
         font-size: 70px;
       }
+    }
+    .header__img--title {
+      font-size: 20px;
+      letter-spacing: 1px;
     }
   }
   .header__face {
