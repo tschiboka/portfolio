@@ -45,8 +45,6 @@ header {
 
 header .header__img {
   height: 100%;
-  /*background-image: url("../images/bg_header.png");
-    background-size: cover;*/
   background: #e83986;
   background: -webkit-gradient(linear, left top, right top, color-stop(10%, #f84d97), color-stop(47%, #89f8fc), to(#6effaf));
   background: linear-gradient(90deg, #f84d97 10%, #89f8fc 47%, #6effaf 100%);
@@ -65,25 +63,95 @@ header .header__img {
 
 @media (min-width: 401px) {
   header .header__img {
-    padding: 10px 30px 0 0;
+    padding: 10px 20px 0 0;
+  }
+}
+
+@media (min-width: 701px) {
+  header .header__img {
+    padding: 10px 10px 0 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .header__img {
+    padding: 30px 60px 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .header__img {
+    padding: 40px 70px 0 0;
   }
 }
 
 @media (max-width: 400px) {
   header .header__img .header__img--name {
-    font-size: 50px;
+    font-size: 55px;
   }
 }
 
 @media (min-width: 401px) {
   header .header__img .header__img--name {
-    font-size: 70px;
+    font-size: 60px;
+    letter-spacing: 2px;
   }
 }
 
-header .header__img .header__img--title {
-  font-size: 20px;
-  letter-spacing: 1px;
+@media (min-width: 701px) {
+  header .header__img .header__img--name {
+    font-size: 80px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .header__img .header__img--name {
+    font-size: 100px;
+    letter-spacing: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .header__img .header__img--name {
+    font-size: 100px;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  header .header__img .header__img--title {
+    font-size: 25px;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 401px) {
+  header .header__img .header__img--title {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 701px) {
+  header .header__img .header__img--title {
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .header__img .header__img--title {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .header__img .header__img--title {
+    font-size: 45px;
+    letter-spacing: 4px;
+  }
 }
 
 header .header__face {
@@ -134,10 +202,10 @@ header .header__face {
 
 @media (min-width: 1200px) {
   header .header__face {
-    top: 125px;
+    top: 110px;
     left: 50px;
-    height: 250px;
-    width: 250px;
+    height: 280px;
+    width: 280px;
   }
 }
 
