@@ -6,7 +6,7 @@
 @import "_vars_and_functions"; /// this file is imported and used throughout the entire document as a partial
 header {
   height: 20vw;
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
   border-bottom: 2px solid setColor(border);
   @include breakpoint(phone) {
     height: 160px;
@@ -24,14 +24,13 @@ header {
     height: 250px;
   }
   // the background image of the header which is clipped
-  .header__img {
+  .header__bg {
     height: 100%;
-    background: rgb(232, 57, 134);
-    background: linear-gradient(
-      90deg,
-      rgb(248, 77, 151) 10%,
-      rgb(137, 248, 252) 47%,
-      rgb(110, 255, 175) 100%
+    background: rgb(137, 248, 252);
+    background: repeating-linear-gradient(
+      60deg,
+      rgb(137, 248, 252) 0%,
+      rgb(110, 255, 175) 10%
     );
     background-clip: text;
     color: transparent;
@@ -45,15 +44,15 @@ header {
       padding: 10px 20px 0 0;
     }
     @include breakpoint(sm) {
-      padding: 10px 10px 0 0;
+      padding: 25px 40px 0 0;
     }
     @include breakpoint(md) {
       padding: 30px 60px 0 0;
     }
     @include breakpoint(lg) {
-      padding: 40px 70px 0 0;
+      padding: 35px 70px 0 0;
     }
-    .header__img--name {
+    .header__bg--name {
       @include breakpoint(phone) {
         font-size: 55px;
       }
@@ -74,7 +73,7 @@ header {
         letter-spacing: 6px;
       }
     }
-    .header__img--title {
+    .header__bg--title {
       @include breakpoint(phone) {
         font-size: 25px;
         letter-spacing: 0;
@@ -124,13 +123,13 @@ header {
       width: 230px;
     }
     @include breakpoint(md) {
-      top: 115px;
+      top: 110px;
       left: 50px;
       height: 250px;
       width: 250px;
     }
     @include breakpoint(lg) {
-      top: 110px;
+      top: 110 px;
       left: 50px;
       height: 280px;
       width: 280px;

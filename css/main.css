@@ -9,7 +9,8 @@
  */
 header {
   height: 20vw;
-  background: rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
   border-bottom: 2px solid #b5b5ff;
 }
 
@@ -43,11 +44,10 @@ header {
   }
 }
 
-header .header__img {
+header .header__bg {
   height: 100%;
-  background: #e83986;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #f84d97), color-stop(47%, #89f8fc), to(#6effaf));
-  background: linear-gradient(90deg, #f84d97 10%, #89f8fc 47%, #6effaf 100%);
+  background: #89f8fc;
+  background: repeating-linear-gradient(60deg, #89f8fc 0%, #6effaf 10%);
   background-clip: text;
   color: transparent;
   font-family: "Ghost Army Stencil";
@@ -55,100 +55,100 @@ header .header__img {
 }
 
 @media (max-width: 400px) {
-  header .header__img {
+  header .header__bg {
     padding: 20px 20px 0 0;
     line-height: 50px;
   }
 }
 
 @media (min-width: 401px) {
-  header .header__img {
+  header .header__bg {
     padding: 10px 20px 0 0;
   }
 }
 
 @media (min-width: 701px) {
-  header .header__img {
-    padding: 10px 10px 0 0;
+  header .header__bg {
+    padding: 25px 40px 0 0;
   }
 }
 
 @media (min-width: 1000px) {
-  header .header__img {
+  header .header__bg {
     padding: 30px 60px 0 0;
   }
 }
 
 @media (min-width: 1200px) {
-  header .header__img {
-    padding: 40px 70px 0 0;
+  header .header__bg {
+    padding: 35px 70px 0 0;
   }
 }
 
 @media (max-width: 400px) {
-  header .header__img .header__img--name {
+  header .header__bg .header__bg--name {
     font-size: 55px;
   }
 }
 
 @media (min-width: 401px) {
-  header .header__img .header__img--name {
+  header .header__bg .header__bg--name {
     font-size: 60px;
     letter-spacing: 2px;
   }
 }
 
 @media (min-width: 701px) {
-  header .header__img .header__img--name {
+  header .header__bg .header__bg--name {
     font-size: 80px;
     letter-spacing: 2px;
   }
 }
 
 @media (min-width: 1000px) {
-  header .header__img .header__img--name {
+  header .header__bg .header__bg--name {
     font-size: 100px;
     letter-spacing: 5px;
   }
 }
 
 @media (min-width: 1200px) {
-  header .header__img .header__img--name {
+  header .header__bg .header__bg--name {
     font-size: 100px;
     letter-spacing: 6px;
   }
 }
 
 @media (max-width: 400px) {
-  header .header__img .header__img--title {
+  header .header__bg .header__bg--title {
     font-size: 25px;
     letter-spacing: 0;
   }
 }
 
 @media (min-width: 401px) {
-  header .header__img .header__img--title {
+  header .header__bg .header__bg--title {
     font-size: 30px;
     letter-spacing: 1px;
   }
 }
 
 @media (min-width: 701px) {
-  header .header__img .header__img--title {
+  header .header__bg .header__bg--title {
     font-size: 35px;
     letter-spacing: 2px;
   }
 }
 
 @media (min-width: 1000px) {
-  header .header__img .header__img--title {
+  header .header__bg .header__bg--title {
     font-size: 40px;
     letter-spacing: 3px;
   }
 }
 
 @media (min-width: 1200px) {
-  header .header__img .header__img--title {
+  header .header__bg .header__bg--title {
     font-size: 45px;
     letter-spacing: 4px;
   }
@@ -193,7 +193,7 @@ header .header__face {
 
 @media (min-width: 1000px) {
   header .header__face {
-    top: 115px;
+    top: 110px;
     left: 50px;
     height: 250px;
     width: 250px;
@@ -202,7 +202,7 @@ header .header__face {
 
 @media (min-width: 1200px) {
   header .header__face {
-    top: 110px;
+    top: 110 px;
     left: 50px;
     height: 280px;
     width: 280px;
@@ -225,5 +225,6 @@ body {
   padding: 0;
   height: 100%;
   background: #282c34;
+  background-image: url("../images/dark-circles.png");
 }
 /*# sourceMappingURL=main.css.map */
