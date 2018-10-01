@@ -12,6 +12,8 @@ header {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.9)));
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
   border-bottom: 2px solid #b5b5ff;
+  -webkit-animation: border-animation 2s linear;
+          animation: border-animation 2s linear;
 }
 
 @media (max-width: 400px) {
@@ -52,6 +54,8 @@ header .header__bg {
   color: transparent;
   font-family: "Ghost Army Stencil";
   text-align: right;
+  -webkit-animation: text-color-animation 2s linear;
+          animation: text-color-animation 2s linear;
 }
 
 @media (max-width: 400px) {
@@ -162,6 +166,8 @@ header .header__face {
   border-left-color: transparent;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-animation: face-animation 2s linear;
+          animation: face-animation 2s linear;
 }
 
 @media (max-width: 400px) {
@@ -218,6 +224,76 @@ header .header__face .header__face__img {
   border-radius: 50%;
   -webkit-transform: rotate(-55deg);
           transform: rotate(-55deg);
+}
+
+@-webkit-keyframes face-animation {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-color: transparent;
+  }
+  10% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  99% {
+    border-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes face-animation {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-color: transparent;
+  }
+  10% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  99% {
+    border-color: transparent;
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes border-animation {
+  0% {
+    border-color: transparent;
+  }
+  99% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #b5b5ff;
+  }
+}
+
+@keyframes border-animation {
+  0% {
+    border-color: transparent;
+  }
+  99% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #b5b5ff;
+  }
 }
 
 body {

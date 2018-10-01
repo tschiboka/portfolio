@@ -8,6 +8,7 @@ header {
   height: 20vw;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
   border-bottom: 2px solid setColor(border);
+  animation: border-animation 2s linear;
   @include breakpoint(phone) {
     height: 160px;
   }
@@ -36,6 +37,7 @@ header {
     color: transparent;
     font-family: "Ghost Army Stencil";
     text-align: right;
+    animation: text-color-animation 2s linear;
     @include breakpoint(phone) {
       padding: 20px 20px 0 0;
       line-height: 50px;
@@ -104,6 +106,7 @@ header {
     border-top-color: transparent;
     border-left-color: transparent;
     transform: rotate(45deg);
+    animation: face-animation 2s linear;
     @include breakpoint(phone) {
       top: 85px;
       left: 0;
@@ -147,5 +150,34 @@ header {
         -55deg
       ); // 55deg is intentional, bacause the img is not fully vertical
     }
+  }
+}
+@keyframes face-animation {
+  0% {
+    transform: rotate(45deg);
+    border-color: transparent;
+  }
+  10% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  99% {
+    border-color: transparent;
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes border-animation {
+  0% {
+    border-color: transparent;
+  }
+  99% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: setColor(border);
   }
 }
