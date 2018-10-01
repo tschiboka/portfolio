@@ -294,10 +294,6 @@ header .header__face .header__face__img {
 /*
  * This file contains all navigation bar styles and animations
  */
-nav {
-  background: red;
-}
-
 nav ul {
   display: none;
   padding: 0;
@@ -305,8 +301,21 @@ nav ul {
 }
 
 nav li {
+  background: red;
   list-style: none;
   text-align: center;
+}
+
+@media (min-width: 701px) {
+  nav li {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  nav li {
+    width: 120px;
+  }
 }
 
 nav li a {
@@ -323,6 +332,35 @@ nav li a {
 }
 
 @media (max-width: 400px) {
+  .nav__toggle {
+    width: 30px;
+    heigth: 30px;
+  }
+}
+
+@media (min-width: 701px) {
+  .nav__toggle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav__toggle {
+    top: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__toggle {
+    top: 250px;
+  }
+}
+
+@media (max-width: 400px) {
   .nav__toggle:checked ~ ul {
     display: block;
   }
@@ -336,6 +374,11 @@ nav li a {
 
 @media (min-width: 701px) {
   .nav__toggle:checked ~ ul {
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    top: 190px;
+    right: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -343,11 +386,15 @@ nav li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
 @media (min-width: 1000px) {
   .nav__toggle:checked ~ ul {
+    top: 230px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -355,11 +402,15 @@ nav li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
 @media (min-width: 1200px) {
   .nav__toggle:checked ~ ul {
+    top: 240px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -367,6 +418,9 @@ nav li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 

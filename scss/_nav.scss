@@ -4,13 +4,19 @@
 @import "_vars_and_functions"; /// this file is imported and used throughout the entire document as a partial
 
 nav {
-  background: red;
   ul {
     display: none;
     padding: 0;
     border: 1px solid green;
   }
   li {
+    background: red;
+    @include breakpoint(sm) {
+      width: 100vw;
+    }
+    @include breakpoint(md) {
+      width: 120px;
+    }
     list-style: none;
     text-align: center;
     a {
@@ -26,6 +32,25 @@ nav {
   margin-left: auto;
   margin-right: 0;
   border: 1px solid green;
+  @include breakpoint(phone) {
+    width: 30px;
+    heigth: 30px;
+  }
+  @include breakpoint(xs) {
+  }
+  @include breakpoint(sm) {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 200px;
+  }
+  @include breakpoint(md) {
+    top: 240px;
+  }
+  @include breakpoint(lg) {
+    top: 250px;
+  }
 }
 
 .nav__toggle:checked ~ ul {
@@ -36,15 +61,25 @@ nav {
     display: block;
   }
   @include breakpoint(sm) {
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    top: 190px;
+    right: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
   @include breakpoint(md) {
+    top: 230px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
   @include breakpoint(lg) {
+    top: 240px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
 }
