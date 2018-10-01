@@ -172,28 +172,23 @@ header .header__face {
 
 @media (max-width: 400px) {
   header .header__face {
-    top: 85px;
-    left: 0;
-    height: 150px;
-    width: 150px;
+    visibility: hidden;
   }
 }
 
 @media (min-width: 401px) {
   header .header__face {
-    top: 65px;
-    left: 10px;
-    height: 170px;
-    width: 170px;
+    visibility: hidden;
   }
 }
 
 @media (min-width: 701px) {
   header .header__face {
     top: 85px;
-    left: 50px;
+    left: 20px;
     height: 230px;
     width: 230px;
+    visibility: visible;
   }
 }
 
@@ -293,6 +288,85 @@ header .header__face .header__face__img {
   }
   100% {
     border-color: #b5b5ff;
+  }
+}
+
+/*
+ * This file contains all navigation bar styles and animations
+ */
+nav {
+  background: red;
+}
+
+nav ul {
+  display: none;
+  padding: 0;
+  border: 1px solid green;
+}
+
+nav li {
+  list-style: none;
+  text-align: center;
+}
+
+nav li a {
+  width: 100vw;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.nav__toggle {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  border: 1px solid green;
+}
+
+@media (max-width: 400px) {
+  .nav__toggle:checked ~ ul {
+    display: block;
+  }
+}
+
+@media (min-width: 401px) {
+  .nav__toggle:checked ~ ul {
+    display: block;
+  }
+}
+
+@media (min-width: 701px) {
+  .nav__toggle:checked ~ ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav__toggle:checked ~ ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__toggle:checked ~ ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 

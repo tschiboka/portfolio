@@ -1,0 +1,50 @@
+/*
+ * This file contains all navigation bar styles and animations
+ */
+@import "_vars_and_functions"; /// this file is imported and used throughout the entire document as a partial
+
+nav {
+  background: red;
+  ul {
+    display: none;
+    padding: 0;
+    border: 1px solid green;
+  }
+  li {
+    list-style: none;
+    text-align: center;
+    a {
+      width: 100vw;
+      text-decoration: none;
+      font-size: 25px;
+    }
+  }
+}
+
+.nav__toggle {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  border: 1px solid green;
+}
+
+.nav__toggle:checked ~ ul {
+  @include breakpoint(phone) {
+    display: block;
+  }
+  @include breakpoint(xs) {
+    display: block;
+  }
+  @include breakpoint(sm) {
+    display: flex;
+    flex-direction: row;
+  }
+  @include breakpoint(md) {
+    display: flex;
+    flex-direction: row;
+  }
+  @include breakpoint(lg) {
+    display: flex;
+    flex-direction: row;
+  }
+}

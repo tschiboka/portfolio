@@ -108,22 +108,17 @@ header {
     transform: rotate(45deg);
     animation: face-animation 2s linear;
     @include breakpoint(phone) {
-      top: 85px;
-      left: 0;
-      height: 150px;
-      width: 150px;
+      visibility: hidden;
     }
     @include breakpoint(xs) {
-      top: 65px;
-      left: 10px;
-      height: 170px;
-      width: 170px;
+      visibility: hidden;
     }
     @include breakpoint(sm) {
       top: 85px;
-      left: 50px;
+      left: 20px;
       height: 230px;
       width: 230px;
+      visibility: visible;
     }
     @include breakpoint(md) {
       top: 110px;
