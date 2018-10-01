@@ -300,31 +300,23 @@ nav ul {
   border: 1px solid green;
 }
 
-nav li {
+nav ul li {
+  width: 100vw;
+  /* list item takes as much space as it's available */
   background: red;
   list-style: none;
   text-align: center;
 }
 
-@media (min-width: 701px) {
-  nav li {
-    width: 100vw;
-  }
-}
-
-@media (min-width: 1000px) {
-  nav li {
-    width: 120px;
-  }
-}
-
-nav li a {
+nav ul li a {
   width: 100vw;
+  /* anchors takes as much space as it's available */
+  height: 100%;
   text-decoration: none;
   font-size: 25px;
 }
 
-.nav__toggle {
+nav .nav__toggle {
   display: block;
   margin-left: auto;
   margin-right: 0;
@@ -332,51 +324,38 @@ nav li a {
 }
 
 @media (max-width: 400px) {
-  .nav__toggle {
+  nav nav ul li a {
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
+  }
+  nav .nav__toggle {
     width: 30px;
-    heigth: 30px;
+    height: 30px;
+  }
+  nav .nav__toggle:checked ~ ul {
+    display: block;
+  }
+}
+
+@media (min-width: 401px) {
+  nav .nav__toggle:checked ~ ul {
+    display: block;
   }
 }
 
 @media (min-width: 701px) {
-  .nav__toggle {
+  nav .nav__toggle {
     position: absolute;
     width: 50px;
     height: 50px;
     right: 0;
     top: 200px;
   }
-}
-
-@media (min-width: 1000px) {
-  .nav__toggle {
-    top: 240px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .nav__toggle {
-    top: 250px;
-  }
-}
-
-@media (max-width: 400px) {
-  .nav__toggle:checked ~ ul {
-    display: block;
-  }
-}
-
-@media (min-width: 401px) {
-  .nav__toggle:checked ~ ul {
-    display: block;
-  }
-}
-
-@media (min-width: 701px) {
-  .nav__toggle:checked ~ ul {
+  nav .nav__toggle:checked ~ ul {
     position: absolute;
     height: 50px;
-    width: 500px;
+    width: 55vw;
     top: 190px;
     right: 50px;
     display: -webkit-box;
@@ -386,14 +365,19 @@ nav li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 @media (min-width: 1000px) {
-  .nav__toggle:checked ~ ul {
+  nav .nav__toggle {
+    top: 240px;
+  }
+  nav .nav__toggle:checked ~ ul {
+    width: 60vw;
+    height: 50px;
     top: 230px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -402,14 +386,21 @@ nav li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 @media (min-width: 1200px) {
-  .nav__toggle:checked ~ ul {
+  nav .nav__toggle {
+    top: 250px;
+  }
+  nav .nav__toggle:checked ~ ul {
+    width: 70vw;
     top: 240px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -418,9 +409,9 @@ nav li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 

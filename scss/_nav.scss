@@ -8,78 +8,87 @@ nav {
     display: none;
     padding: 0;
     border: 1px solid green;
-  }
-  li {
-    background: red;
-    @include breakpoint(sm) {
-      width: 100vw;
-    }
-    @include breakpoint(md) {
-      width: 120px;
-    }
-    list-style: none;
-    text-align: center;
-    a {
-      width: 100vw;
-      text-decoration: none;
-      font-size: 25px;
+    li {
+      width: 100vw; /* list item takes as much space as it's available */
+      background: red;
+      list-style: none;
+      text-align: center;
+      a {
+        width: 100vw; /* anchors takes as much space as it's available */
+        height: 100%;
+        text-decoration: none;
+        font-size: 25px;
+      }
     }
   }
-}
-
-.nav__toggle {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-  border: 1px solid green;
+  .nav__toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    border: 1px solid green;
+  }
   @include breakpoint(phone) {
-    width: 30px;
-    heigth: 30px;
+    nav ul li a {
+      display: inline-block;
+      height: 50px;
+      vertical-align: middle;
+    }
+    .nav__toggle {
+      width: 30px;
+      height: 30px;
+    }
+    .nav__toggle:checked ~ ul {
+      display: block;
+    }
   }
   @include breakpoint(xs) {
+    .nav__toggle:checked ~ ul {
+      display: block;
+    }
   }
   @include breakpoint(sm) {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    right: 0;
-    top: 200px;
+    .nav__toggle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      top: 200px;
+    }
+    .nav__toggle:checked ~ ul {
+      position: absolute;
+      height: 50px;
+      width: 55vw;
+      top: 190px;
+      right: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   @include breakpoint(md) {
-    top: 240px;
+    .nav__toggle {
+      top: 240px;
+    }
+    .nav__toggle:checked ~ ul {
+      width: 60vw;
+      height: 50px;
+      top: 230px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   @include breakpoint(lg) {
-    top: 250px;
-  }
-}
-
-.nav__toggle:checked ~ ul {
-  @include breakpoint(phone) {
-    display: block;
-  }
-  @include breakpoint(xs) {
-    display: block;
-  }
-  @include breakpoint(sm) {
-    position: absolute;
-    height: 50px;
-    width: 500px;
-    top: 190px;
-    right: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  @include breakpoint(md) {
-    top: 230px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  @include breakpoint(lg) {
-    top: 240px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    .nav__toggle {
+      top: 250px;
+    }
+    .nav__toggle:checked ~ ul {
+      width: 70vw;
+      top: 240px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
