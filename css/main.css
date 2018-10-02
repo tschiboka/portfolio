@@ -258,8 +258,63 @@ header .header__face .header__face__img {
 /*
  * This file contains all navigation bar styles and animations
  */
+.nav__toggle {
+  opacity: 0;
+}
+
+.nav__toggle:not(:checked) ~ nav .nav__burger .nav__burger__line1 {
+  -webkit-animation: animation-nav-toggle-to-lines-line1 0.5s linear;
+          animation: animation-nav-toggle-to-lines-line1 0.5s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  margin-left: 9px;
+}
+
+.nav__toggle:not(:checked) ~ nav .nav__burger .nav__burger__line2 {
+  -webkit-animation: animation-nav-toggle-to-lines-line2 1s linear;
+          animation: animation-nav-toggle-to-lines-line2 1s linear;
+  opacity: 1;
+}
+
+.nav__toggle:not(:checked) ~ nav .nav__burger .nav__burger__line3 {
+  -webkit-animation: animation-nav-toggle-to-lines-line3 0.5s linear;
+          animation: animation-nav-toggle-to-lines-line3 0.5s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  margin-left: 9px;
+}
+
+.nav__toggle:checked ~ nav .nav__burger .nav__burger__line1 {
+  -webkit-animation: animation-nav-toggle-to-x-line1 0.5s linear;
+          animation: animation-nav-toggle-to-x-line1 0.5s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.nav__toggle:checked ~ nav .nav__burger .nav__burger__line2 {
+  -webkit-animation: animation-nav-toggle-to-x-line2 1s linear;
+          animation: animation-nav-toggle-to-x-line2 1s linear;
+  opacity: 0;
+}
+
+.nav__toggle:checked ~ nav .nav__burger .nav__burger__line3 {
+  -webkit-animation: animation-nav-toggle-to-x-line3 0.5s linear;
+          animation: animation-nav-toggle-to-x-line3 0.5s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  margin-top: 9px;
+  margin-left: 13px;
+}
+
 nav ul {
-  display: none;
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #b5b5ff;
@@ -282,11 +337,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #e9a750;
-}
-
-nav .nav__toggle {
-  opacity: 0;
+  color: #f1c489;
 }
 
 nav .nav__burger {
@@ -295,8 +346,7 @@ nav .nav__burger {
 }
 
 nav label,
-nav .nav__burger,
-nav .nav__toggle {
+nav .nav__burger {
   position: absolute;
   top: 0;
   right: 0;
@@ -335,58 +385,6 @@ nav .nav__burger .nav__burger__line3 {
           transform: rotate(-40deg);
 }
 
-nav .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line1 {
-  -webkit-animation: animation-nav-toggle-to-lines-line1 0.5s linear;
-          animation: animation-nav-toggle-to-lines-line1 0.5s linear;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  margin-left: 9px;
-}
-
-nav .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line2 {
-  -webkit-animation: animation-nav-toggle-to-lines-line2 1s linear;
-          animation: animation-nav-toggle-to-lines-line2 1s linear;
-  opacity: 1;
-}
-
-nav .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line3 {
-  -webkit-animation: animation-nav-toggle-to-lines-line3 0.5s linear;
-          animation: animation-nav-toggle-to-lines-line3 0.5s linear;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  margin-left: 9px;
-}
-
-nav .nav__toggle:checked ~ .nav__burger .nav__burger__line1 {
-  -webkit-animation: animation-nav-toggle-to-x-line1 0.5s linear;
-          animation: animation-nav-toggle-to-x-line1 0.5s linear;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-}
-
-nav .nav__toggle:checked ~ .nav__burger .nav__burger__line2 {
-  -webkit-animation: animation-nav-toggle-to-x-line2 1s linear;
-          animation: animation-nav-toggle-to-x-line2 1s linear;
-  opacity: 0;
-}
-
-nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
-  -webkit-animation: animation-nav-toggle-to-x-line3 0.5s linear;
-          animation: animation-nav-toggle-to-x-line3 0.5s linear;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
-  margin-top: 9px;
-  margin-left: 13px;
-}
-
 @media (max-width: 400px) {
   nav {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7)));
@@ -401,12 +399,8 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
     line-height: 50px;
   }
   nav label,
-  nav .nav__burger,
-  nav .nav__toggle {
+  nav .nav__burger {
     top: 162px;
-  }
-  nav .nav__toggle:checked ~ ul {
-    display: block;
   }
 }
 
@@ -424,12 +418,8 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
     line-height: 50px;
   }
   nav label,
-  nav .nav__burger,
-  nav .nav__toggle {
+  nav .nav__burger {
     top: 152px;
-  }
-  nav .nav__toggle:checked ~ ul {
-    display: block;
   }
 }
 
@@ -449,11 +439,43 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
     height: 50px;
   }
   nav label,
-  nav .nav__burger,
-  nav .nav__toggle {
+  nav .nav__burger {
     top: 203px;
   }
-  nav .nav__toggle:checked ~ ul {
+}
+
+@media (min-width: 1000px) {
+  nav label,
+  nav .nav__burger {
+    top: 243px;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav label,
+  nav .nav__burger {
+    top: 252px;
+  }
+  nav .nav__toggle:not(:checked) ~ ul {
+    -webkit-animation: nav-out-lg 1s ease-in;
+            animation: nav-out-lg 1s ease-in;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav__toggle:checked ~ nav ul {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 401px) {
+  .nav__toggle:checked ~ nav ul {
+    display: block;
+  }
+}
+
+@media (min-width: 701px) {
+  .nav__toggle:checked ~ nav ul {
     position: absolute;
     height: 50px;
     width: 50vw;
@@ -478,12 +500,7 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
 }
 
 @media (min-width: 1000px) {
-  nav label,
-  nav .nav__burger,
-  nav .nav__toggle {
-    top: 243px;
-  }
-  nav .nav__toggle:checked ~ ul {
+  .nav__toggle:checked ~ nav ul {
     width: 60vw;
     height: 50px;
     top: 230px;
@@ -507,12 +524,7 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
 }
 
 @media (min-width: 1200px) {
-  nav label,
-  nav .nav__burger,
-  nav .nav__toggle {
-    top: 252px;
-  }
-  nav .nav__toggle:checked ~ ul {
+  .nav__toggle:checked ~ nav ul {
     width: 65vw;
     top: 240px;
     display: -webkit-box;
@@ -527,10 +539,6 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
             justify-content: space-between;
     -webkit-animation: nav-in-lg 1s ease-out;
             animation: nav-in-lg 1s ease-out;
-  }
-  nav .nav__toggle:not(:checked) ~ ul {
-    -webkit-animation: nav-out-lg 1s ease-in;
-            animation: nav-out-lg 1s ease-in;
   }
 }
 

@@ -3,9 +3,50 @@
  */
 @import "_vars_and_functions"; /// this file is imported and used throughout the entire document as a partial
 
+.nav__toggle {
+  opacity: 0;
+}
+
+.nav__toggle:not(:checked) ~ nav .nav__burger .nav__burger__line1 {
+  animation: animation-nav-toggle-to-lines-line1 0.5s linear;
+  transform-origin: top left;
+  transform: rotate(0deg);
+  margin-left: 9px;
+}
+
+.nav__toggle:not(:checked) ~ nav .nav__burger .nav__burger__line2 {
+  animation: animation-nav-toggle-to-lines-line2 1s linear;
+  opacity: 1;
+}
+
+.nav__toggle:not(:checked) ~ nav .nav__burger .nav__burger__line3 {
+  animation: animation-nav-toggle-to-lines-line3 0.5s linear;
+  transform-origin: top left;
+  transform: rotate(0deg);
+  margin-left: 9px;
+}
+
+.nav__toggle:checked ~ nav .nav__burger .nav__burger__line1 {
+  animation: animation-nav-toggle-to-x-line1 0.5s linear;
+  transform-origin: top left;
+  transform: rotate(40deg);
+}
+
+.nav__toggle:checked ~ nav .nav__burger .nav__burger__line2 {
+  animation: animation-nav-toggle-to-x-line2 1s linear;
+  opacity: 0;
+}
+
+.nav__toggle:checked ~ nav .nav__burger .nav__burger__line3 {
+  animation: animation-nav-toggle-to-x-line3 0.5s linear;
+  transform-origin: top left;
+  transform: rotate(-40deg);
+  margin-top: 9px;
+  margin-left: 13px;
+}
+
 nav {
   ul {
-    display: none;
     margin: 0;
     padding: 0;
     border-bottom: 2px solid setColor(border);
@@ -20,14 +61,10 @@ nav {
         font-size: 25px;
         color: setColor(nav-text);
         &:hover {
-          color: rgb(233, 167, 80);
+          color: rgb(241, 196, 137);
         }
       }
     }
-  }
-
-  .nav__toggle {
-    opacity: 0;
   }
 
   .nav__burger {
@@ -36,8 +73,7 @@ nav {
   }
 
   label,
-  .nav__burger,
-  .nav__toggle {
+  .nav__burger {
     position: absolute;
     top: 0;
     right: 0;
@@ -71,44 +107,6 @@ nav {
     }
   }
 
-  .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line1 {
-    animation: animation-nav-toggle-to-lines-line1 0.5s linear;
-    transform-origin: top left;
-    transform: rotate(0deg);
-    margin-left: 9px;
-  }
-
-  .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line2 {
-    animation: animation-nav-toggle-to-lines-line2 1s linear;
-    opacity: 1;
-  }
-
-  .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line3 {
-    animation: animation-nav-toggle-to-lines-line3 0.5s linear;
-    transform-origin: top left;
-    transform: rotate(0deg);
-    margin-left: 9px;
-  }
-
-  .nav__toggle:checked ~ .nav__burger .nav__burger__line1 {
-    animation: animation-nav-toggle-to-x-line1 0.5s linear;
-    transform-origin: top left;
-    transform: rotate(40deg);
-  }
-
-  .nav__toggle:checked ~ .nav__burger .nav__burger__line2 {
-    animation: animation-nav-toggle-to-x-line2 1s linear;
-    opacity: 0;
-  }
-
-  .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
-    animation: animation-nav-toggle-to-x-line3 0.5s linear;
-    transform-origin: top left;
-    transform: rotate(-40deg);
-    margin-top: 9px;
-    margin-left: 13px;
-  }
-
   @include breakpoint(phone) {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
     ul li {
@@ -121,13 +119,8 @@ nav {
     }
 
     label,
-    .nav__burger,
-    .nav__toggle {
+    .nav__burger {
       top: 162px;
-    }
-
-    .nav__toggle:checked ~ ul {
-      display: block;
     }
   }
   @include breakpoint(xs) {
@@ -142,13 +135,8 @@ nav {
     }
 
     label,
-    .nav__burger,
-    .nav__toggle {
+    .nav__burger {
       top: 152px;
-    }
-
-    .nav__toggle:checked ~ ul {
-      display: block;
     }
   }
   @include breakpoint(sm) {
@@ -170,12 +158,44 @@ nav {
     }
 
     label,
-    .nav__burger,
-    .nav__toggle {
+    .nav__burger {
       top: 203px;
     }
+  }
 
-    .nav__toggle:checked ~ ul {
+  @include breakpoint(md) {
+    label,
+    .nav__burger {
+      top: 243px;
+    }
+  }
+
+  @include breakpoint(lg) {
+    label,
+    .nav__burger {
+      top: 252px;
+    }
+
+    .nav__toggle:not(:checked) ~ ul {
+      animation: nav-out-lg 1s ease-in;
+    }
+  }
+}
+
+.nav__toggle:checked ~ nav {
+  @include breakpoint(phone) {
+    ul {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint(xs) {
+    ul {
+      display: block;
+    }
+  }
+  @include breakpoint(sm) {
+    ul {
       position: absolute;
       height: 50px;
       width: 50vw;
@@ -189,15 +209,8 @@ nav {
       animation: nav-in-sm 1s ease-out;
     }
   }
-
   @include breakpoint(md) {
-    label,
-    .nav__burger,
-    .nav__toggle {
-      top: 243px;
-    }
-
-    .nav__toggle:checked ~ ul {
+    ul {
       width: 60vw;
       height: 50px;
       top: 230px;
@@ -209,25 +222,14 @@ nav {
       animation: nav-in-md 1s ease-out;
     }
   }
-
   @include breakpoint(lg) {
-    label,
-    .nav__burger,
-    .nav__toggle {
-      top: 252px;
-    }
-
-    .nav__toggle:checked ~ ul {
+    ul {
       width: 65vw;
       top: 240px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       animation: nav-in-lg 1s ease-out;
-    }
-
-    .nav__toggle:not(:checked) ~ ul {
-      animation: nav-out-lg 1s ease-in;
     }
   }
 }
