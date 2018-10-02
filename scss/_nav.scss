@@ -22,13 +22,17 @@ nav {
       }
     }
   }
+
   .nav__toggle {
     opacity: 0;
-    border-bottom: 2px solid setColor(border);
   }
+
   .nav__burger {
     background: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid setColor(border);
   }
+
+  label,
   .nav__burger,
   .nav__toggle {
     position: absolute;
@@ -37,6 +41,21 @@ nav {
     width: 50px;
     height: 50px;
   }
+
+  .nav__burger {
+    div {
+      width: 32px;
+      height: 2px;
+      margin-left: 9px;
+      margin-top: 8px;
+      background: white;
+      border-radius: 2px;
+    }
+    .nav__burger__line1 {
+      margin-top: 12px;
+    }
+  }
+
   @include breakpoint(phone) {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
     ul li {
@@ -47,10 +66,13 @@ nav {
         line-height: 50px;
       }
     }
+
+    label,
     .nav__burger,
     .nav__toggle {
       top: 162px;
     }
+
     .nav__toggle:checked ~ ul {
       display: block;
     }
@@ -65,10 +87,13 @@ nav {
         line-height: 50px;
       }
     }
+
+    label,
     .nav__burger,
     .nav__toggle {
       top: 152px;
     }
+
     .nav__toggle:checked ~ ul {
       display: block;
     }
@@ -90,6 +115,8 @@ nav {
       width: 100%;
       height: 50px;
     }
+
+    label,
     .nav__burger,
     .nav__toggle {
       top: 203px;
@@ -108,6 +135,7 @@ nav {
       transform: translate(0, 12px);
     }
   }
+
   @include breakpoint(md) {
     .nav__burger,
     .nav__toggle {
@@ -125,7 +153,9 @@ nav {
       line-height: 45px;
     }
   }
+
   @include breakpoint(lg) {
+    label,
     .nav__burger,
     .nav__toggle {
       top: 252px;
@@ -139,4 +169,7 @@ nav {
       justify-content: space-between;
     }
   }
+}
+
+@keyframes nav-toggle-x {
 }
