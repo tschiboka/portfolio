@@ -8,7 +8,6 @@ header {
   height: 20vw;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
   border-bottom: 2px solid setColor(border);
-  animation: border-animation 2s linear;
   @include breakpoint(phone) {
     height: 160px;
   }
@@ -37,7 +36,6 @@ header {
     color: transparent;
     font-family: "Ghost Army Stencil";
     text-align: right;
-    animation: text-color-animation 2s linear;
     @include breakpoint(phone) {
       padding: 20px 20px 0 0;
       line-height: 50px;
@@ -121,13 +119,13 @@ header {
       visibility: visible;
     }
     @include breakpoint(md) {
-      top: 110px;
+      top: 115px;
       left: 50px;
       height: 250px;
       width: 250px;
     }
     @include breakpoint(lg) {
-      top: 110 px;
+      top: 110px;
       left: 50px;
       height: 280px;
       width: 280px;
@@ -150,7 +148,6 @@ header {
 @keyframes face-animation {
   0% {
     transform: rotate(45deg);
-    border-color: transparent;
   }
   10% {
     transform: rotate(60deg);
@@ -158,21 +155,7 @@ header {
   50% {
     transform: rotate(20deg);
   }
-  99% {
-    border-color: transparent;
-  }
   100% {
     transform: rotate(45deg);
-  }
-}
-@keyframes border-animation {
-  0% {
-    border-color: transparent;
-  }
-  99% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: setColor(border);
   }
 }
