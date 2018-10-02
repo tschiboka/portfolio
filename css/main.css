@@ -281,6 +281,10 @@ nav ul li a {
   color: #b4eddd;
 }
 
+nav ul li a:hover {
+  color: #e9a750;
+}
+
 nav .nav__toggle {
   opacity: 0;
 }
@@ -468,6 +472,8 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
     line-height: 40px;
     -webkit-transform: translate(0, 12px);
             transform: translate(0, 12px);
+    -webkit-animation: nav-in-sm 1s ease-out;
+            animation: nav-in-sm 1s ease-out;
   }
 }
 
@@ -495,6 +501,8 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
         -ms-flex-align: center;
             align-items: center;
     line-height: 45px;
+    -webkit-animation: nav-in-md 1s ease-out;
+            animation: nav-in-md 1s ease-out;
   }
 }
 
@@ -732,6 +740,42 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
 @keyframes nav-in-lg {
   0% {
     right: -65vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes nav-in-md {
+  0% {
+    right: -60vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes nav-in-md {
+  0% {
+    right: -60vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@-webkit-keyframes nav-in-sm {
+  0% {
+    right: -50vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes nav-in-sm {
+  0% {
+    right: -50vw;
   }
   100% {
     right: 0;

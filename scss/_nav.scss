@@ -19,6 +19,9 @@ nav {
         text-decoration: none;
         font-size: 25px;
         color: setColor(nav-text);
+        &:hover {
+          color: rgb(233, 167, 80);
+        }
       }
     }
   }
@@ -183,6 +186,7 @@ nav {
       justify-content: space-between;
       line-height: 40px;
       transform: translate(0, 12px);
+      animation: nav-in-sm 1s ease-out;
     }
   }
 
@@ -202,6 +206,7 @@ nav {
       justify-content: space-between;
       align-items: center;
       line-height: 45px;
+      animation: nav-in-md 1s ease-out;
     }
   }
 
@@ -311,6 +316,24 @@ nav {
 @keyframes nav-in-lg {
   0% {
     right: -65vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes nav-in-md {
+  0% {
+    right: -60vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes nav-in-sm {
+  0% {
+    right: -50vw;
   }
   100% {
     right: 0;
