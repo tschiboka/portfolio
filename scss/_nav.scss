@@ -18,7 +18,7 @@ nav {
         height: 100%;
         text-decoration: none;
         font-size: 25px;
-        color: #dbfbfd;
+        color: setColor(nav-text);
       }
     }
   }
@@ -48,12 +48,62 @@ nav {
       height: 2px;
       margin-left: 9px;
       margin-top: 8px;
-      background: white;
+      background: setColor(nav-text);
       border-radius: 2px;
     }
     .nav__burger__line1 {
       margin-top: 12px;
+      margin-left: 15px;
+      transform-origin: top left;
+      transform: rotate(40deg);
     }
+    .nav__burger__line2 {
+      opacity: 0;
+    }
+    .nav__burger__line3 {
+      margin-top: 9px;
+      margin-left: 15px;
+      transform-origin: bottom left;
+      transform: rotate(-40deg);
+    }
+  }
+
+  .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line1 {
+    animation: animation-nav-toggle-to-lines-line1 0.5s linear;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    margin-left: 9px;
+  }
+
+  .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line2 {
+    animation: animation-nav-toggle-to-lines-line2 1s linear;
+    opacity: 1;
+  }
+
+  .nav__toggle:not(:checked) ~ .nav__burger .nav__burger__line3 {
+    animation: animation-nav-toggle-to-lines-line3 0.5s linear;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    margin-left: 9px;
+  }
+
+  .nav__toggle:checked ~ .nav__burger .nav__burger__line1 {
+    animation: animation-nav-toggle-to-x-line1 0.5s linear;
+    transform-origin: top left;
+    transform: rotate(40deg);
+  }
+
+  .nav__toggle:checked ~ .nav__burger .nav__burger__line2 {
+    animation: animation-nav-toggle-to-x-line2 1s linear;
+    opacity: 0;
+  }
+
+  .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
+    animation: animation-nav-toggle-to-x-line3 0.5s linear;
+    transform-origin: top left;
+    transform: rotate(-40deg);
+    margin-top: 9px;
+    margin-left: 13px;
   }
 
   @include breakpoint(phone) {
@@ -171,5 +221,74 @@ nav {
   }
 }
 
-@keyframes nav-toggle-x {
+@keyframes animation-nav-toggle-to-lines-line1 {
+  0% {
+    margin-top: 12px;
+    margin-left: 15px;
+    transform-origin: top left;
+    transform: rotate(40deg);
+  }
+  100% {
+    transform-origin: top left;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animation-nav-toggle-to-lines-line2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-nav-toggle-to-lines-line3 {
+  0% {
+    margin-top: 12px;
+    margin-left: 15px;
+    transform-origin: top left;
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform-origin: top left;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animation-nav-toggle-to-x-line1 {
+  0% {
+    transform-origin: top left;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: 12px;
+    margin-left: 15px;
+    transform-origin: top left;
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes animation-nav-toggle-to-x-line2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-nav-toggle-to-x-line3 {
+  0% {
+    margin-top: 12px;
+    margin-left: 15px;
+    transform-origin: top left;
+    transform: rotate(0deg);
+  }
+  100% {
+    margin-top: 9px;
+    margin-left: 15px;
+    transform-origin: top left;
+    transform: rotate(-40deg);
+  }
 }
