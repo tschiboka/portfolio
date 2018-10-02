@@ -187,6 +187,7 @@ nav {
   }
 
   @include breakpoint(md) {
+    label,
     .nav__burger,
     .nav__toggle {
       top: 243px;
@@ -217,6 +218,11 @@ nav {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      animation: nav-in-lg 1s ease-out;
+    }
+
+    .nav__toggle:not(:checked) ~ ul {
+      animation: nav-out-lg 1s ease-in;
     }
   }
 }
@@ -290,5 +296,23 @@ nav {
     margin-left: 15px;
     transform-origin: top left;
     transform: rotate(-40deg);
+  }
+}
+
+@keyframes nav-out-lg {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -65vw;
+  }
+}
+
+@keyframes nav-in-lg {
+  0% {
+    right: -65vw;
+  }
+  100% {
+    right: 0;
   }
 }

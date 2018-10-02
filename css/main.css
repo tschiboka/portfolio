@@ -278,7 +278,7 @@ nav ul li a {
   height: 100%;
   text-decoration: none;
   font-size: 25px;
-  color: #dbfbfd;
+  color: #b4eddd;
 }
 
 nav .nav__toggle {
@@ -305,7 +305,7 @@ nav .nav__burger div {
   height: 2px;
   margin-left: 9px;
   margin-top: 8px;
-  background: #dbfbfd;
+  background: #b4eddd;
   border-radius: 2px;
 }
 
@@ -472,6 +472,7 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
 }
 
 @media (min-width: 1000px) {
+  nav label,
   nav .nav__burger,
   nav .nav__toggle {
     top: 243px;
@@ -516,6 +517,12 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-animation: nav-in-lg 1s ease-out;
+            animation: nav-in-lg 1s ease-out;
+  }
+  nav .nav__toggle:not(:checked) ~ ul {
+    -webkit-animation: nav-out-lg 1s ease-in;
+            animation: nav-out-lg 1s ease-in;
   }
 }
 
@@ -692,6 +699,42 @@ nav .nav__toggle:checked ~ .nav__burger .nav__burger__line3 {
             transform-origin: top left;
     -webkit-transform: rotate(-40deg);
             transform: rotate(-40deg);
+  }
+}
+
+@-webkit-keyframes nav-out-lg {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -65vw;
+  }
+}
+
+@keyframes nav-out-lg {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -65vw;
+  }
+}
+
+@-webkit-keyframes nav-in-lg {
+  0% {
+    right: -65vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes nav-in-lg {
+  0% {
+    right: -65vw;
+  }
+  100% {
+    right: 0;
   }
 }
 
