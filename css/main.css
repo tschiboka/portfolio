@@ -461,14 +461,24 @@ nav .nav__burger .nav__burger__line3 {
 @media (max-width: 400px) {
   .nav__toggle:checked ~ nav ul {
     display: block;
+    -webkit-animation: nav-in-s 0.35s ease-in;
+            animation: nav-in-s 0.35s ease-in;
+  }
+  .nav__toggle:checked ~ nav ul li a {
+    -webkit-animation: text-in 1.2s linear;
+            animation: text-in 1.2s linear;
   }
 }
 
 @media (min-width: 401px) {
   .nav__toggle:checked ~ nav ul {
     display: block;
-    -webkit-animation: nav-in-s 0.35s ease-in-out;
-            animation: nav-in-s 0.35s ease-in-out;
+    -webkit-animation: nav-in-s 0.35s ease-in;
+            animation: nav-in-s 0.35s ease-in;
+  }
+  .nav__toggle:checked ~ nav ul li a {
+    -webkit-animation: text-in 1.2s linear;
+            animation: text-in 1.2s linear;
   }
 }
 
@@ -552,15 +562,44 @@ nav .nav__burger .nav__burger__line3 {
   }
 }
 
+@media (max-width: 400px) {
+  .nav__toggle:not(:checked) ~ nav ul {
+    display: block;
+    height: 0;
+    -webkit-animation: nav-out-s 1s ease-in;
+            animation: nav-out-s 1s ease-in;
+  }
+  .nav__toggle:not(:checked) ~ nav ul li a {
+    -webkit-animation: text-out 1s linear;
+            animation: text-out 1s linear;
+    color: transparent;
+  }
+}
+
+@media (min-width: 401px) {
+  .nav__toggle:not(:checked) ~ nav ul {
+    display: block;
+    height: 0;
+    -webkit-animation: nav-out-s 1s ease-in;
+            animation: nav-out-s 1s ease-in;
+  }
+  .nav__toggle:not(:checked) ~ nav ul li a {
+    -webkit-animation: text-out 1s linear;
+            animation: text-out 1s linear;
+    color: transparent;
+  }
+}
+
 @media (min-width: 701px) {
   .nav__toggle:not(:checked) ~ nav ul {
     position: absolute;
-    width: 50vw;
-    top: 210px;
-    right: -65vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 50vw;
+    height: 50px;
+    top: 210px;
+    right: -65vw;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -881,6 +920,30 @@ nav .nav__burger .nav__burger__line3 {
   }
   100% {
     height: 50px;
+  }
+}
+
+@-webkit-keyframes nav-out-s {
+  0% {
+    height: 200px;
+  }
+  70% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes nav-out-s {
+  0% {
+    height: 200px;
+  }
+  70% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
   }
 }
 
