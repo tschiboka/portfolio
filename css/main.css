@@ -456,10 +456,6 @@ nav .nav__burger .nav__burger__line3 {
   nav .nav__burger {
     top: 252px;
   }
-  nav .nav__toggle:not(:checked) ~ ul {
-    -webkit-animation: nav-out-lg 1s ease-in;
-            animation: nav-out-lg 1s ease-in;
-  }
 }
 
 @media (max-width: 400px) {
@@ -553,6 +549,34 @@ nav .nav__burger .nav__burger__line3 {
   .nav__toggle:checked ~ nav ul li a {
     -webkit-animation: text-in 1.2s linear;
             animation: text-in 1.2s linear;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__toggle:not(:checked) ~ nav ul {
+    position: absolute;
+    width: 65vw;
+    top: 260px;
+    right: -65vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transform: translate(0, 12px);
+            transform: translate(0, 12px);
+    z-index: -1;
+    -webkit-animation: nav-out-lg 1s ease-out;
+            animation: nav-out-lg 1s ease-out;
+  }
+  .nav__toggle:not(:checked) ~ nav ul li a {
+    -webkit-animation: text-out 1s linear;
+            animation: text-out 1s linear;
   }
 }
 
@@ -843,6 +867,30 @@ nav .nav__burger .nav__burger__line3 {
   }
   100% {
     color: #b4eddd;
+  }
+}
+
+@-webkit-keyframes text-out {
+  0% {
+    color: #b4eddd;
+  }
+  20% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes text-out {
+  0% {
+    color: #b4eddd;
+  }
+  20% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
   }
 }
 
