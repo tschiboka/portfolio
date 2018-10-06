@@ -337,7 +337,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f1c489;
+  color: #d989f1;
 }
 
 nav .nav__burger {
@@ -1047,6 +1047,10 @@ nav .nav__burger .nav__burger__line3 {
   100% {
     right: -50vw;
   }
+}
+
+.about {
+  color: #dbdbff;
 }
 
 body {
