@@ -327,6 +327,14 @@ nav ul li {
   text-align: center;
 }
 
+nav ul li:hover {
+  background: #b4eddda1;
+}
+
+nav ul li:hover a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 nav ul li a {
   width: 100vw;
   /* anchors takes as much space as it's available */
@@ -334,10 +342,6 @@ nav ul li a {
   text-decoration: none;
   font-size: 22px;
   color: #b4eddd;
-}
-
-nav ul li a:hover {
-  color: #d989f1;
 }
 
 nav .nav__burger {
@@ -1049,6 +1053,9 @@ nav .nav__burger .nav__burger__line3 {
   }
 }
 
+/*
+ * This file contains the styling of about section of the page
+ */
 .about {
   color: #dbdbff;
 }
@@ -1063,7 +1070,7 @@ nav .nav__burger .nav__burger__line3 {
 @media (min-width: 401px) {
   .about {
     padding: 50px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 

@@ -1,3 +1,6 @@
+/*
+ * This file contains the styling of about section of the page
+ */
 .about {
   color: #dbdbff;
   @include breakpoint(phone) {
@@ -6,6 +9,6 @@
   }
   @include breakpoint(xs) {
     padding: 50px;
-    font-size: 18px;
+    font-size: 20px;
   }
 }

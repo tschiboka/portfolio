@@ -54,15 +54,18 @@ nav {
       width: 100vw; /* list item takes as much space as it's available */
       list-style: none;
       text-align: center;
+      &:hover {
+        background: #b4eddda1;
+        a {
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
       a {
         width: 100vw; /* anchors takes as much space as it's available */
         height: 100%;
         text-decoration: none;
         font-size: 22px;
         color: setColor(nav-text);
-        &:hover {
-          color: rgb(217, 137, 241);
-        }
       }
     }
   }
