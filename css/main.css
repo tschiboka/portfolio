@@ -336,6 +336,7 @@ nav ul li:hover a {
 }
 
 nav ul li a {
+  display: inline-block;
   width: 100vw;
   /* anchors takes as much space as it's available */
   height: 100%;
@@ -436,6 +437,9 @@ nav .nav__burger .nav__burger__line3 {
     background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.7)));
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
     border-left: 2px solid #b5b5ff;
+    border-bottom-left-radius: 25px;
+  }
+  nav ul li:first-child {
     border-bottom-left-radius: 25px;
   }
   nav ul li a {
@@ -573,9 +577,14 @@ nav .nav__burger .nav__burger__line3 {
     -webkit-animation: nav-out-s 1s ease-in;
             animation: nav-out-s 1s ease-in;
   }
+  .nav__toggle:not(:checked) ~ nav ul li {
+    -webkit-animation: nav-li-out-s 1s ease-in;
+            animation: nav-li-out-s 1s ease-in;
+    height: 0;
+  }
   .nav__toggle:not(:checked) ~ nav ul li a {
-    -webkit-animation: text-out 1s linear;
-            animation: text-out 1s linear;
+    -webkit-animation: text-out 0.7s linear;
+            animation: text-out 0.7s linear;
     color: transparent;
   }
 }
@@ -587,9 +596,14 @@ nav .nav__burger .nav__burger__line3 {
     -webkit-animation: nav-out-s 1s ease-in;
             animation: nav-out-s 1s ease-in;
   }
+  .nav__toggle:not(:checked) ~ nav ul li {
+    -webkit-animation: nav-li-out-s 1s ease-in;
+            animation: nav-li-out-s 1s ease-in;
+    height: 0;
+  }
   .nav__toggle:not(:checked) ~ nav ul li a {
-    -webkit-animation: text-out 1s linear;
-            animation: text-out 1s linear;
+    -webkit-animation: text-out 0.7s linear;
+            animation: text-out 0.7s linear;
     color: transparent;
   }
 }
@@ -932,7 +946,7 @@ nav .nav__burger .nav__burger__line3 {
     height: 200px;
   }
   70% {
-    height: 50px;
+    height: 100px;
   }
   100% {
     height: 0;
@@ -944,6 +958,30 @@ nav .nav__burger .nav__burger__line3 {
     height: 200px;
   }
   70% {
+    height: 100px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes nav-li-out-s {
+  0% {
+    height: 50px;
+  }
+  90% {
+    height: 50px;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes nav-li-out-s {
+  0% {
+    height: 50px;
+  }
+  90% {
     height: 50px;
   }
   100% {
