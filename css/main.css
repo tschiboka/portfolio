@@ -1053,6 +1053,20 @@ nav .nav__burger .nav__burger__line3 {
   color: #dbdbff;
 }
 
+@media (max-width: 400px) {
+  .about {
+    padding: 50px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 401px) {
+  .about {
+    padding: 50px;
+    font-size: 18px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

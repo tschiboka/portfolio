@@ -1,3 +1,11 @@
 .about {
   color: #dbdbff;
+  @include breakpoint(phone) {
+    padding: 50px;
+    font-size: 18px;
+  }
+  @include breakpoint(xs) {
+    padding: 50px;
+    font-size: 18px;
+  }
 }
