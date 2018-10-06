@@ -71,6 +71,10 @@ nav {
     }
   }
 
+  label {
+    z-index: 99;
+  }
+
   .nav__burger {
     background: rgba(0, 0, 0, 0.7);
     border-bottom: 2px solid setColor(border);
