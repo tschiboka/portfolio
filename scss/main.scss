@@ -11,6 +11,8 @@ body {
   padding: 0;
   height: 100%;
   max-width: 100%;
+  //body owerflow-x is hidden, because when navbar scrolls out
+  //it renders the page wider, now navbar is completly hidden
   overflow-x: hidden;
   background: setColor(primary);
   background-image: url("../images/dark-circles.png");

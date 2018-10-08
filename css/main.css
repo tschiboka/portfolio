@@ -1100,19 +1100,47 @@ nav .nav__burger .nav__burger__line3 {
  */
 .about {
   color: #dbdbff;
+  border-left: 2px solid #b5b5ff;
+  text-align: justify;
 }
 
 @media (max-width: 400px) {
   .about {
-    padding: 50px;
+    margin: 50px 50px 50px 40px;
+    padding-left: 10px;
     font-size: 18px;
   }
 }
 
 @media (min-width: 401px) {
   .about {
-    padding: 50px;
+    margin: 50px 50px 50px 40px;
+    padding-left: 10px;
     font-size: 20px;
+  }
+}
+
+@media (min-width: 701px) {
+  .about {
+    margin: 115px 70px 50px 60px;
+    padding-left: 15px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .about {
+    margin: 125px 80px 50px 90px;
+    padding-left: 10px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    margin: 135px 75px 50px 90px;
+    padding-left: 15px;
+    font-size: 23px;
   }
 }
 
