@@ -1099,14 +1099,16 @@ nav .nav__burger .nav__burger__line3 {
  * This file contains the styling of about section of the page
  */
 .about {
-  color: #dbdbff;
+  color: #b4eddd96;
   border-left: 2px solid #b5b5ff;
   text-align: justify;
+  -webkit-animation: about-in 1s linear;
+          animation: about-in 1s linear;
 }
 
 @media (max-width: 400px) {
   .about {
-    margin: 50px 50px 50px 40px;
+    margin: 60px 50px 50px 40px;
     padding-left: 10px;
     font-size: 18px;
   }
@@ -1114,7 +1116,7 @@ nav .nav__burger .nav__burger__line3 {
 
 @media (min-width: 401px) {
   .about {
-    margin: 50px 50px 50px 40px;
+    margin: 60px 50px 50px 40px;
     padding-left: 10px;
     font-size: 20px;
   }
@@ -1141,6 +1143,24 @@ nav .nav__burger .nav__burger__line3 {
     margin: 135px 75px 50px 90px;
     padding-left: 15px;
     font-size: 23px;
+  }
+}
+
+@-webkit-keyframes about-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes about-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
