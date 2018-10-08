@@ -1,0 +1,10 @@
+.projects {
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  img {
+    width: 40vw;
+  }
+}

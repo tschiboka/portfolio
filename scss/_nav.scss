@@ -72,7 +72,7 @@ nav {
   }
 
   label {
-    z-index: 99;
+    z-index: 99; // so hover wont highlight when nav scrolls back
   }
 
   .nav__burger {
