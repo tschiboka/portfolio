@@ -1099,7 +1099,7 @@ nav .nav__burger .nav__burger__line3 {
  * This file contains the styling of about section of the page
  */
 .about {
-  color: #b4eddd96;
+  color: #b4edddad;
   border-left: 2px solid #b5b5ff;
   text-align: justify;
   -webkit-animation: about-in 1s linear;

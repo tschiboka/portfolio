@@ -2,10 +2,13 @@
   font-family: "Ghost Army Stencil";
   src: url(../fonts/GhostArmyStencil.otf) format("opentype");
 }
+
 @import "_vars_and_functions";
 @import "header";
 @import "nav";
 @import "about";
+@import "projects";
+
 body {
   margin: 0;
   padding: 0;
