@@ -1202,7 +1202,16 @@ nav .nav__burger .nav__burger__line3 {
   width: 100%;
   background: rgba(0, 0, 0, 0.9);
   color: #fee6ad;
-  font-size: 1.4rem;
+  opacity: 0;
+}
+
+.projects .img-wrapper .projects__description:hover {
+  opacity: 1;
+}
+
+.projects .img-wrapper .projects__description div {
+  padding: 2%;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 400px) {
