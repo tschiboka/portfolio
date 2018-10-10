@@ -1099,7 +1099,7 @@ nav .nav__burger .nav__burger__line3 {
  * This file contains the styling of about section of the page
  */
 .about {
-  color: #b4edddad;
+  color: #d6f7edcb;
   border-left: 2px solid #f4d6fe;
   text-align: justify;
   -webkit-animation: about-in 1s linear;
@@ -1180,12 +1180,29 @@ nav .nav__burger .nav__burger__line3 {
 }
 
 .projects .img-wrapper {
+  position: relative;
+  padding: 2vw;
   border: 2px solid #f4d6fe;
   border-radius: 5px;
 }
 
 .projects .img-wrapper img {
   border-radius: 5px;
+}
+
+.projects .img-wrapper img:hover {
+  opacity: 0.1;
+}
+
+.projects .img-wrapper .projects__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fee6ad;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 400px) {
@@ -1220,7 +1237,7 @@ nav .nav__burger .nav__burger__line3 {
   }
   .projects .img-wrapper {
     margin-bottom: 50px;
-    width: 45%;
+    width: 42%;
   }
   .projects .img-wrapper img {
     width: 100%;
