@@ -1207,13 +1207,13 @@ nav .nav__burger .nav__burger__line3 {
   left: 0;
   height: 0%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   color: #fee6ad;
 }
 
 .projects .img-wrapper .projects__description div {
   height: 100%;
-  padding: 20px;
+  padding: 0.5rem;
   font-size: 1.2rem;
   text-align: justify;
   opacity: 0;
