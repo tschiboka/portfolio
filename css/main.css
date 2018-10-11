@@ -217,6 +217,27 @@ header .header__face .header__face__img {
           transform: rotate(-55deg);
 }
 
+header .header__face .header__face__img:hover {
+  -webkit-animation: face-spin 1.5s linear infinite;
+          animation: face-spin 1.5s linear infinite;
+}
+
+header .header__face .header__face__img:hover .aaa {
+  opacity: 1;
+}
+
+header .header__face .header__face__img .aaa {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  height: 100px;
+  width: 80px;
+  background-image: url(../icons/aaa.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+}
+
 @-webkit-keyframes face-animation {
   0% {
     -webkit-transform: rotate(45deg);
@@ -252,6 +273,28 @@ header .header__face .header__face__img {
   100% {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes face-spin {
+  0% {
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
+  }
+  100% {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
+  }
+}
+
+@keyframes face-spin {
+  0% {
+    -webkit-transform: rotate(-55deg);
+            transform: rotate(-55deg);
+  }
+  100% {
+    -webkit-transform: rotate(315deg);
+            transform: rotate(315deg);
   }
 }
 

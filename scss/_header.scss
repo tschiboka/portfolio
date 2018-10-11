@@ -142,6 +142,23 @@ header {
       transform: rotate(
         -55deg
       ); // 55deg is intentional, bacause the img is not fully vertical
+      &:hover {
+        animation: face-spin 1.5s linear infinite;
+        .aaa {
+          opacity: 1;
+        }
+      }
+      .aaa {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        height: 100px;
+        width: 80px;
+        background-image: url(../icons/aaa.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0;
+      }
     }
   }
 }
@@ -157,5 +174,13 @@ header {
   }
   100% {
     transform: rotate(45deg);
+  }
+}
+@keyframes face-spin {
+  0% {
+    transform: rotate(-55deg);
+  }
+  100% {
+    transform: rotate(315deg);
   }
 }
