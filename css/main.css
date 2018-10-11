@@ -1308,8 +1308,8 @@ nav .nav__burger .nav__burger__line3 {
 }
 
 .contact table tr img {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 
 .contact table tr img:hover {
@@ -1323,14 +1323,14 @@ nav .nav__burger .nav__burger__line3 {
 
 @media (max-width: 400px) {
   .contact {
-    padding: 60px 50px 50px 40px;
+    padding: 80px 50px 50px 40px;
     font-size: 18px;
   }
 }
 
 @media (min-width: 401px) {
   .contact {
-    padding: 60px 50px 50px 40px;
+    padding: 90px 50px 50px 40px;
     font-size: 20px;
   }
 }

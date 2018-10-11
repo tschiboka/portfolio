@@ -6,8 +6,8 @@
     margin-top: 20px;
     border-left: 4px solid setColor(nav-text);
     tr img {
-      height: 70px;
-      width: 70px;
+      height: 60px;
+      width: 60px;
       &:hover {
         animation: icon-vibe 0.05s ease-out infinite;
       }
@@ -18,11 +18,11 @@
   }
 
   @include breakpoint(phone) {
-    padding: 60px 50px 50px 40px;
+    padding: 80px 50px 50px 40px;
     font-size: 18px;
   }
   @include breakpoint(xs) {
-    padding: 60px 50px 50px 40px;
+    padding: 90px 50px 50px 40px;
     font-size: 20px;
   }
   @include breakpoint(sm) {
