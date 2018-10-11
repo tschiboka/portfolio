@@ -1295,6 +1295,48 @@ nav .nav__burger .nav__burger__line3 {
   }
 }
 
+.contact {
+  -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  background: white;
+  color: #282c34;
+}
+
+@media (max-width: 400px) {
+  .contact {
+    padding: 60px 50px 50px 40px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 401px) {
+  .contact {
+    padding: 60px 50px 50px 40px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 701px) {
+  .contact {
+    padding: 115px 70px 50px 60px;
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    padding: 125px 80px 50px 90px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    padding: 135px 75px 50px 90px;
+    font-size: 23px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
