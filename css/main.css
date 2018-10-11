@@ -1305,6 +1305,7 @@ nav .nav__burger .nav__burger__line3 {
 .contact table {
   margin-top: 20px;
   border-left: 4px solid #b4eddd;
+  border-right: 4px solid #b4eddd;
 }
 
 .contact table tr img {
@@ -1318,13 +1319,16 @@ nav .nav__burger .nav__burger__line3 {
 }
 
 .contact table tr:hover td:nth-child(2) {
-  -webkit-animation: contact-background 0.4s ease-in;
-          animation: contact-background 0.4s ease-in;
-  background: #282c34;
+  -webkit-animation: contact-color 0.5s ease-in;
+          animation: contact-color 0.5s ease-in;
+  background: -webkit-gradient(linear, left top, right top, from(#282c34), to(#4a5160));
+  background: linear-gradient(90deg, #282c34, #4a5160);
+  color: #b4eddd;
 }
 
 .contact table tr td:nth-child(2) {
   padding-left: 10px;
+  width: 100%;
 }
 
 @media (max-width: 400px) {
@@ -1384,21 +1388,21 @@ nav .nav__burger .nav__burger__line3 {
   }
 }
 
-@-webkit-keyframes contact-background {
+@-webkit-keyframes contact-color {
   0% {
-    background: white;
+    color: #282c34;
   }
   100% {
-    background: green;
+    color: #b4eddd;
   }
 }
 
-@keyframes contact-background {
+@keyframes contact-color {
   0% {
-    background: white;
+    color: #282c34;
   }
   100% {
-    background: green;
+    color: #b4eddd;
   }
 }
 
