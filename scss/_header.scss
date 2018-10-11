@@ -11,17 +11,34 @@ header {
   @include breakpoint(phone) {
     height: 160px;
   }
+
   @include breakpoint(xs) {
     height: 150px;
   }
+
   @include breakpoint(sm) {
     height: 200px;
   }
+
   @include breakpoint(md) {
     height: 240px;
   }
+
   @include breakpoint(lg) {
     height: 250px;
+  }
+  .vinyl-arm {
+    position: absolute;
+    top: 110px;
+    left: 320px;
+    height: 250px;
+    width: 80px;
+    background-image: url(../images/vinyl_arm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: top;
+    visibility: hidden;
+    //animation: vinyl-arm-in 1s linear;
   }
   // the background image of the header which is clipped
   .header__bg {
@@ -40,18 +57,23 @@ header {
       padding: 20px 20px 0 0;
       line-height: 50px;
     }
+
     @include breakpoint(xs) {
       padding: 10px 20px 0 0;
     }
+
     @include breakpoint(sm) {
       padding: 25px 40px 0 0;
     }
+
     @include breakpoint(md) {
       padding: 30px 60px 0 0;
     }
+
     @include breakpoint(lg) {
       padding: 35px 70px 0 0;
     }
+
     .header__bg--name {
       @include breakpoint(phone) {
         font-size: 55px;
@@ -122,12 +144,15 @@ header {
       transform: rotate(-45deg);
       opacity: 0;
     }
+
     @include breakpoint(phone) {
       visibility: hidden;
     }
+
     @include breakpoint(xs) {
       visibility: hidden;
     }
+
     @include breakpoint(sm) {
       top: 85px;
       left: 20px;
@@ -135,12 +160,14 @@ header {
       width: 230px;
       visibility: visible;
     }
+
     @include breakpoint(md) {
       top: 115px;
       left: 50px;
       height: 250px;
       width: 250px;
     }
+
     @include breakpoint(lg) {
       top: 110px;
       left: 50px;
@@ -189,5 +216,27 @@ header {
   }
   100% {
     transform: rotate(315deg);
+  }
+}
+@keyframes vinyl-arm-in {
+  0% {
+    transform: rotate(0);
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+@keyframes vinyl-arm-out {
+  0% {
+    transform: rotate(25deg);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    transform: rotate(0);
   }
 }

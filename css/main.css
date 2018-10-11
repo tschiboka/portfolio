@@ -44,6 +44,20 @@ header {
   }
 }
 
+header .vinyl-arm {
+  position: absolute;
+  top: 110px;
+  left: 320px;
+  height: 250px;
+  width: 80px;
+  background-image: url(../images/vinyl_arm.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  visibility: hidden;
+}
+
 header .header__bg {
   height: 100%;
   background: #89f8fc;
@@ -302,6 +316,62 @@ header .header__face .header__face__img:hover .aaa {
   100% {
     -webkit-transform: rotate(315deg);
             transform: rotate(315deg);
+  }
+}
+
+@-webkit-keyframes vinyl-arm-in {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+}
+
+@keyframes vinyl-arm-in {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+}
+
+@-webkit-keyframes vinyl-arm-out {
+  0% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes vinyl-arm-out {
+  0% {
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
