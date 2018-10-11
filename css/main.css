@@ -166,6 +166,24 @@ header .header__face {
           animation: face-animation 2s linear;
 }
 
+header .header__face:hover .aaa {
+  opacity: 1;
+}
+
+header .header__face .aaa {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  height: 100px;
+  width: 80px;
+  background-image: url(../icons/aaa.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: 0;
+}
+
 @media (max-width: 400px) {
   header .header__face {
     visibility: hidden;
@@ -218,24 +236,13 @@ header .header__face .header__face__img {
 }
 
 header .header__face .header__face__img:hover {
-  -webkit-animation: face-spin 1.5s linear infinite;
-          animation: face-spin 1.5s linear infinite;
+  background-image: url(../images/aaa.png);
+  -webkit-animation: face-spin 0.7s linear infinite;
+          animation: face-spin 0.7s linear infinite;
 }
 
 header .header__face .header__face__img:hover .aaa {
   opacity: 1;
-}
-
-header .header__face .header__face__img .aaa {
-  position: absolute;
-  top: 0;
-  left: -20px;
-  height: 100px;
-  width: 80px;
-  background-image: url(../icons/aaa.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0;
 }
 
 @-webkit-keyframes face-animation {
@@ -1167,7 +1174,7 @@ nav .nav__burger .nav__burger__line3 {
 
 @media (min-width: 701px) {
   .about {
-    margin: 115px 70px 50px 60px;
+    margin: 135px 70px 50px 60px;
     padding-left: 15px;
     font-size: 21px;
   }
@@ -1175,7 +1182,7 @@ nav .nav__burger .nav__burger__line3 {
 
 @media (min-width: 1000px) {
   .about {
-    margin: 125px 80px 50px 90px;
+    margin: 135px 80px 50px 90px;
     padding-left: 10px;
     font-size: 22px;
   }
@@ -1183,7 +1190,7 @@ nav .nav__burger .nav__burger__line3 {
 
 @media (min-width: 1200px) {
   .about {
-    margin: 135px 75px 50px 90px;
+    margin: 145px 75px 50px 90px;
     padding-left: 15px;
     font-size: 23px;
   }

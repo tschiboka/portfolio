@@ -17,17 +17,17 @@
     font-size: 20px;
   }
   @include breakpoint(sm) {
-    margin: 115px 70px 50px 60px;
+    margin: 135px 70px 50px 60px;
     padding-left: 15px;
     font-size: 21px;
   }
   @include breakpoint(md) {
-    margin: 125px 80px 50px 90px;
+    margin: 135px 80px 50px 90px;
     padding-left: 10px;
     font-size: 22px;
   }
   @include breakpoint(lg) {
-    margin: 135px 75px 50px 90px;
+    margin: 145px 75px 50px 90px;
     padding-left: 15px;
     font-size: 23px;
   }

@@ -105,6 +105,23 @@ header {
     border-left-color: transparent;
     transform: rotate(45deg);
     animation: face-animation 2s linear;
+    &:hover {
+      .aaa {
+        opacity: 1;
+      }
+    }
+    .aaa {
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      height: 100px;
+      width: 80px;
+      background-image: url(../icons/aaa.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: rotate(-45deg);
+      opacity: 0;
+    }
     @include breakpoint(phone) {
       visibility: hidden;
     }
@@ -143,21 +160,11 @@ header {
         -55deg
       ); // 55deg is intentional, bacause the img is not fully vertical
       &:hover {
-        animation: face-spin 1.5s linear infinite;
+        background-image: url(../images/aaa.png);
+        animation: face-spin 0.7s linear infinite;
         .aaa {
           opacity: 1;
         }
-      }
-      .aaa {
-        position: absolute;
-        top: 0;
-        left: -20px;
-        height: 100px;
-        width: 80px;
-        background-image: url(../icons/aaa.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        opacity: 0;
       }
     }
   }
