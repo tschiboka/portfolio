@@ -2,22 +2,21 @@
   clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
   background: white;
   color: setColor(primary);
-  .contact__item {
-    display: flex;
-    align-items: center;
-    .contact__icon {
-      width: 70px;
+  table {
+    margin-top: 20px;
+    border-left: 4px solid setColor(nav-text);
+    tr img {
       height: 70px;
-      background-size: contain;
-      background-repeat: no-repeat;
+      width: 70px;
       &:hover {
-        animation: icon-vibe 0.05s linear infinite;
+        animation: icon-vibe 0.05s ease-out infinite;
       }
     }
-    .phone__icon {
-      background-image: url("../icons/phone_icon.png");
+    tr td:nth-child(2) {
+      padding-left: 10px;
     }
   }
+
   @include breakpoint(phone) {
     padding: 60px 50px 50px 40px;
     font-size: 18px;

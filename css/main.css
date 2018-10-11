@@ -1302,29 +1302,23 @@ nav .nav__burger .nav__burger__line3 {
   color: #282c34;
 }
 
-.contact .contact__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.contact table {
+  margin-top: 20px;
+  border-left: 4px solid #b4eddd;
 }
 
-.contact .contact__item .contact__icon {
-  width: 70px;
+.contact table tr img {
   height: 70px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 70px;
 }
 
-.contact .contact__item .contact__icon:hover {
-  -webkit-animation: icon-vibe 0.05s linear infinite;
-          animation: icon-vibe 0.05s linear infinite;
+.contact table tr img:hover {
+  -webkit-animation: icon-vibe 0.05s ease-out infinite;
+          animation: icon-vibe 0.05s ease-out infinite;
 }
 
-.contact .contact__item .phone__icon {
-  background-image: url("../icons/phone_icon.png");
+.contact table tr td:nth-child(2) {
+  padding-left: 10px;
 }
 
 @media (max-width: 400px) {
