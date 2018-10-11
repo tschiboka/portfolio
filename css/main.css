@@ -1308,24 +1308,31 @@ nav .nav__burger .nav__burger__line3 {
 }
 
 .technologies {
-  height: 100px;
-  padding-top: 20px;
-  padding-left: 100px;
+  height: 150px;
   -webkit-clip-path: polygon(5% 50%, 3% 10%, 97% 10%, 100% 50%, 97% 100%, 3% 100%, 5% 50%);
           clip-path: polygon(5% 50%, 3% 10%, 97% 10%, 100% 50%, 97% 100%, 3% 100%, 5% 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: white;
   -webkit-animation: technologies-open 0.7s ease-out;
           animation: technologies-open 0.7s ease-out;
 }
 
-.technologies .tech-icon {
-  height: 80px;
+.technologies img {
   width: 80px;
-  background: url("../icons/html_icon.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-box-shadow: 2px 2px 5px black;
-          box-shadow: 2px 2px 5px black;
+  height: 80px;
+  padding: 10px;
 }
 
 @-webkit-keyframes technologies-open {
@@ -1389,11 +1396,11 @@ nav .nav__burger .nav__burger__line3 {
   left: 0;
   height: 0%;
   width: 100%;
+  -webkit-clip-path: polygon(0% 95%, 0% 0%, 100% 0%, 100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%, 70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%, 40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%, 10% 97%, 5% 100%, 0% 97%);
+          clip-path: polygon(0% 95%, 0% 0%, 100% 0%, 100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%, 70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%, 40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%, 10% 97%, 5% 100%, 0% 97%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-clip-path: polygon(0% 95%, 0% 0%, 100% 0%, 100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%, 70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%, 40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%, 10% 97%, 5% 100%, 0% 97%);
-          clip-path: polygon(0% 95%, 0% 0%, 100% 0%, 100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%, 70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%, 40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%, 10% 97%, 5% 100%, 0% 97%);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

@@ -1,13 +1,16 @@
-// Give animation for vinyl arm, because face__img is not a sibling or a child
-// of it therefore I couldn't write a good hover selector for it
+/*
+ * Give animation for vinyl arm, because face__img is not a sibling or a child
+ * of it therefore I couldn't write a good hover selector for it
+ */
 
-vinylArmIn();
+vinylArmAnimate();
 
-function vinylArmIn() {
+function vinylArmAnimate() {
   const face = document.getElementsByClassName("header__face__img")[0],
     arm = document.getElementsByClassName("vinyl-arm")[0];
-
+  let timer;
   face.addEventListener("mouseover", () => {
+    clearTimeout(timer);
     // set visibility
     arm.style.visibility = "visible";
 
@@ -38,10 +41,20 @@ function vinylArmIn() {
     arm.style.msTransform = "rotate(0deg)";
     arm.style.oTransform = "rotate(0deg)";
     arm.style.transform = "rotate(0deg)";
-    setTimeout(() => {
+    timer = setTimeout(() => {
       arm.style.visibility = "hidden";
     }, 2500);
   });
+} // end of vinylArmAnimate
 
-  console.log(arm);
+/*
+ * Add scroll listener, so navbar can be sticky even if it's absolute.
+ */
+
+listenScroll();
+
+function listenScroll() {
+  window.addEventListener("scroll", () => {
+    console.log("SCROLLIN");
+  });
 }

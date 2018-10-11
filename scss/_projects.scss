@@ -28,7 +28,6 @@
       left: 0;
       height: 0%;
       width: 100%;
-      display: flex; // for centering text vertically
       clip-path: polygon(
         0% 95%,
         0% 0%,
@@ -55,6 +54,8 @@
         5% 100%,
         0% 97%
       );
+      display: flex;
+      // for centering text vertically
       align-items: center;
       background: rgba(0, 0, 0, 0.85);
       border-radius: 5px;
