@@ -1,0 +1,20 @@
+footer {
+  margin: 20px;
+  text-align: right;
+  color: setColor(nav-text);
+  .love {
+    color: #ff5353;
+    display: inline-block;
+    transform: scale(1.7);
+    animation: throb 0.6s cubic-bezier(0.08, 0.8, 0.32, 0.85) infinite;
+  }
+}
+
+@keyframes throb {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.7);
+  }
+}
