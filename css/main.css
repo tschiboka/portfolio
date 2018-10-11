@@ -1312,9 +1312,15 @@ nav .nav__burger .nav__burger__line3 {
   width: 60px;
 }
 
-.contact table tr img:hover {
+.contact table tr:hover td:first-child {
   -webkit-animation: icon-vibe 0.05s ease-out infinite;
           animation: icon-vibe 0.05s ease-out infinite;
+}
+
+.contact table tr:hover td:nth-child(2) {
+  -webkit-animation: contact-background 0.4s ease-in;
+          animation: contact-background 0.4s ease-in;
+  background: #282c34;
 }
 
 .contact table tr td:nth-child(2) {
@@ -1375,6 +1381,24 @@ nav .nav__burger .nav__burger__line3 {
   100% {
     -webkit-transform: rotate(-4deg);
             transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes contact-background {
+  0% {
+    background: white;
+  }
+  100% {
+    background: green;
+  }
+}
+
+@keyframes contact-background {
+  0% {
+    background: white;
+  }
+  100% {
+    background: green;
   }
 }
 

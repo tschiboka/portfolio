@@ -8,8 +8,14 @@
     tr img {
       height: 60px;
       width: 60px;
-      &:hover {
+    }
+    tr:hover {
+      td:first-child {
         animation: icon-vibe 0.05s ease-out infinite;
+      }
+      td:nth-child(2) {
+        animation: contact-background 0.4s ease-in;
+        background: setColor(primary);
       }
     }
     tr td:nth-child(2) {
@@ -45,5 +51,14 @@
   }
   100% {
     transform: rotate(-4deg);
+  }
+}
+
+@keyframes contact-background {
+  0% {
+    background: white;
+  }
+  100% {
+    background: green;
   }
 }
