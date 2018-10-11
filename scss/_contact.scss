@@ -2,6 +2,22 @@
   clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
   background: white;
   color: setColor(primary);
+  .contact__item {
+    display: flex;
+    align-items: center;
+    .contact__icon {
+      width: 70px;
+      height: 70px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      &:hover {
+        animation: icon-vibe 0.05s linear infinite;
+      }
+    }
+    .phone__icon {
+      background-image: url("../icons/phone_icon.png");
+    }
+  }
   @include breakpoint(phone) {
     padding: 60px 50px 50px 40px;
     font-size: 18px;
@@ -21,5 +37,14 @@
   @include breakpoint(lg) {
     padding: 135px 75px 50px 90px;
     font-size: 23px;
+  }
+}
+
+@keyframes icon-vibe {
+  0% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
   }
 }

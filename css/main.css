@@ -1302,6 +1302,31 @@ nav .nav__burger .nav__burger__line3 {
   color: #282c34;
 }
 
+.contact .contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact__item .contact__icon {
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact .contact__item .contact__icon:hover {
+  -webkit-animation: icon-vibe 0.05s linear infinite;
+          animation: icon-vibe 0.05s linear infinite;
+}
+
+.contact .contact__item .phone__icon {
+  background-image: url("../icons/phone_icon.png");
+}
+
 @media (max-width: 400px) {
   .contact {
     padding: 60px 50px 50px 40px;
@@ -1334,6 +1359,28 @@ nav .nav__burger .nav__burger__line3 {
   .contact {
     padding: 135px 75px 50px 90px;
     font-size: 23px;
+  }
+}
+
+@-webkit-keyframes icon-vibe {
+  0% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+}
+
+@keyframes icon-vibe {
+  0% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
 }
 
