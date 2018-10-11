@@ -46,16 +46,39 @@ header {
 
 header .vinyl-arm {
   position: absolute;
-  top: 110px;
-  left: 320px;
-  height: 250px;
-  width: 80px;
   background-image: url(../images/vinyl_arm.png);
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transform-origin: top;
           transform-origin: top;
   visibility: hidden;
+}
+
+@media (min-width: 701px) {
+  header .vinyl-arm {
+    top: 100px;
+    left: 230px;
+    height: 200px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .vinyl-arm {
+    top: 110px;
+    left: 320px;
+    height: 250px;
+    width: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .vinyl-arm {
+    top: 110px;
+    left: 320px;
+    height: 250px;
+    width: 80px;
+  }
 }
 
 header .header__bg {

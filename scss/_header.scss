@@ -29,16 +29,30 @@ header {
   }
   .vinyl-arm {
     position: absolute;
-    top: 110px;
-    left: 320px;
-    height: 250px;
-    width: 80px;
     background-image: url(../images/vinyl_arm.png);
     background-repeat: no-repeat;
     background-size: contain;
     transform-origin: top;
     visibility: hidden;
-    //animation: vinyl-arm-in 1s linear;
+    // animation comes from index.js vinylArmAnimate
+    @include breakpoint(sm) {
+      top: 100px;
+      left: 230px;
+      height: 200px;
+      width: 60px;
+    }
+    @include breakpoint(md) {
+      top: 110px;
+      left: 320px;
+      height: 250px;
+      width: 80px;
+    }
+    @include breakpoint(lg) {
+      top: 110px;
+      left: 320px;
+      height: 250px;
+      width: 80px;
+    }
   }
   // the background image of the header which is clipped
   .header__bg {
