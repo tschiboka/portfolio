@@ -52,19 +52,22 @@ function vinylArmAnimate() {
  * Thus i'll write my own stycky navbar.
  */
 
-listenScroll();
+/*listenScroll();
 
 function listenScroll() {
+  const body = document.getElementsByTagName("body")[0];
+  //if () {}
   window.addEventListener("scroll", () => {
     const navlist = document.querySelector("nav ul"),
       navlistTop = navlist.getBoundingClientRect().top,
-      bodyTop = document.getElementsByTagName("body")[0].getBoundingClientRect()
-        .top;
+      burger = document.querySelector(".nav__burger"),
+      bodyTop = body.getBoundingClientRect().top;
 
     if (navlistTop < 0) {
       navlist.style.top = `${Math.abs(bodyTop)}px`;
       navlist.style.zIndex = "9999";
     }
-    console.log("SCROLLIN", navlistTop, bodyTop, navlist.style.zIndex);
+
+    console.log("SCROLLIN", burger);
   });
-}
+}*/
