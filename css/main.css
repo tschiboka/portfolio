@@ -398,6 +398,51 @@ header .header__face .header__face__img:hover .aaa {
   }
 }
 
+#nav__checkbox {
+  position: absolute;
+  top: -1000px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul a {
+  height: 50px;
+  width: 100vw;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #b4eddd;
+}
+
+nav ul a:hover {
+  background: green;
+}
+
+@media (max-width: 400px) {
+  nav {
+    background: red;
+  }
+  nav ul {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 /*
  * This file contains the styling of about section of the page
  */
