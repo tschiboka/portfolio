@@ -1,13 +1,19 @@
 nav {
+  background: rgba(0, 0, 0, 0.8);
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    li:last-child {
+      display: flex;
+      align-items: center;
+    }
 
     a {
       text-decoration: none;
       line-height: 50px;
       font-size: 20px;
+      color: setColor(nav-text);
     }
   }
 
@@ -35,19 +41,36 @@ nav {
 //
 .nav__burger {
   position: relative;
-  margin-left: 50%;
-  margin-right: auto;
-  background: red;
   @include breakpoint(phone) {
-    width: 100vw;
+    width: 20vw;
     height: 20px;
     .nav__burger__line1 {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 50px;
-      height: 4px;
-      background: green;
+      top: 80%;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background: setColor(nav-text);
+    }
+    .nav__burger__line2 {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      width: 43%;
+      height: 3px;
+      background: setColor(nav-text);
+      transform-origin: left bottom;
+      transform: rotate(-17deg);
+    }
+    .nav__burger__line3 {
+      position: absolute;
+      top: 80%;
+      right: 10%;
+      width: 43%;
+      height: 3px;
+      background: setColor(nav-text);
+      transform-origin: right bottom;
+      transform: rotate(17deg);
     }
   }
 }
