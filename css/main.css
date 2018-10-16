@@ -495,9 +495,11 @@ nav input {
 @media (min-width: 701px) {
   nav {
     height: 50px;
+    width: 55vw;
+    float: right;
   }
   nav ul {
-    width: 50vw;
+    width: 55vw;
     height: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -506,13 +508,15 @@ nav input {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    float: right;
   }
   nav ul li {
-    width: 11vw;
+    width: 12.4vw;
+  }
+  nav ul li:last-child {
+    width: 50px;
   }
   nav ul li a {
-    width: 11vw;
+    width: 12.4vw;
     display: inline-block;
     text-align: center;
   }
@@ -571,7 +575,7 @@ nav input {
 @media (min-width: 401px) {
   .nav__burger {
     width: 20vw;
-    max-width: 90px;
+    max-width: 70px;
     height: 20px;
   }
   .nav__burger .nav__burger__line1 {
@@ -614,35 +618,36 @@ nav input {
   }
   .nav__burger .nav__burger__line1 {
     position: absolute;
-    top: 80%;
-    left: 10%;
-    width: 80%;
+    top: 21px;
+    left: 10px;
+    width: 30px;
     height: 2px;
     background: #b4eddd;
+    visibility: hidden;
   }
   .nav__burger .nav__burger__line2 {
     position: absolute;
-    top: 80%;
-    left: 10%;
-    width: 42.5%;
-    height: 2px;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 3px;
     background: #b4eddd;
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom;
-    -webkit-transform: rotate(-17deg);
-            transform: rotate(-17deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
   .nav__burger .nav__burger__line3 {
     position: absolute;
-    top: 80%;
-    right: 10%;
-    width: 42.5%;
-    height: 2px;
+    top: 32px;
+    left: 10px;
+    width: 30px;
+    height: 3px;
     background: #b4eddd;
-    -webkit-transform-origin: right bottom;
-            transform-origin: right bottom;
-    -webkit-transform: rotate(17deg);
-            transform: rotate(17deg);
+    -webkit-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 
