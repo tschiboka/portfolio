@@ -1,14 +1,37 @@
 $arrow-width: 2px;
 
 nav {
-  background: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 5%,
+    rgba(0, 0, 0, 0.7) 15%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 0.7) 85%,
+    rgba(0, 0, 0, 0.5) 95%
+  );
+  border-bottom: 2px solid setColor(border);
+  border-left: 2px solid setColor(border);
+  border-bottom-left-radius: 5px;
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    li:last-child {
-      display: flex;
-      align-items: center;
+    li {
+      &:hover {
+        background: setColor(nav-text);
+        a {
+          color: rgba(0, 0, 0, 0.8);
+        }
+        .nav__burger__line1,
+        .nav__burger__line2,
+        .nav__burger__line3 {
+          background: rgba(0, 0, 0, 0.8);
+        }
+      }
+      &:last-child {
+        display: flex;
+        align-items: center;
+      }
     }
 
     a {
@@ -74,9 +97,12 @@ nav {
   }
 
   @include breakpoint(sm) {
+    position: sticky;
+    top: 0;
     height: 50px;
     width: 55vw;
     float: right;
+    z-index: 9999;
     ul {
       width: 55vw;
       height: 50px;
@@ -195,7 +221,7 @@ nav {
       height: 3px;
       background: setColor(nav-text);
       transform-origin: left bottom;
-      transform: rotate(45deg);
+      transform: rotate(44.5deg);
     }
     .nav__burger__line3 {
       position: absolute;
@@ -205,7 +231,7 @@ nav {
       height: 3px;
       background: setColor(nav-text);
       transform-origin: left top;
-      transform: rotate(-45deg);
+      transform: rotate(-44.5deg);
     }
   }
 }
