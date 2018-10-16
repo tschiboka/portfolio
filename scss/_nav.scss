@@ -1,5 +1,7 @@
+$arrow-width: 2px;
+
 nav {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   ul {
     margin: 0;
     padding: 0;
@@ -17,12 +19,33 @@ nav {
     }
   }
 
+  input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
   @include breakpoint(phone) {
     ul {
       width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
+      li {
+        width: 100vw;
+        a {
+          width: 100vw;
+          display: inline-block;
+          text-align: center;
+        }
+        label {
+          display: absolute;
+          width: 100vw;
+          height: 50px;
+          top: 0;
+          left: 0;
+        }
+      }
     }
   }
 
@@ -32,15 +55,56 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
+      li {
+        width: 100vw;
+        a {
+          width: 100vw;
+          display: inline-block;
+          text-align: center;
+        }
+        label {
+          display: absolute;
+          width: 100vw;
+          height: 50px;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    height: 50px;
+    ul {
+      width: 50vw;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      float: right;
+      li {
+        width: 11vw;
+        a {
+          width: 11vw;
+          display: inline-block;
+          text-align: center;
+        }
+        label {
+          display: absolute;
+          height: 50px;
+          top: 0;
+          left: 0;
+        }
+      }
     }
   }
 }
 
 //
-// BURGER
+// ARROW / BURGER
 //
 .nav__burger {
   position: relative;
+  margin: 0 auto;
   @include breakpoint(phone) {
     width: 20vw;
     height: 20px;
@@ -49,7 +113,7 @@ nav {
       top: 80%;
       left: 10%;
       width: 80%;
-      height: 3px;
+      height: $arrow-width;
       background: setColor(nav-text);
     }
     .nav__burger__line2 {
@@ -57,7 +121,7 @@ nav {
       top: 80%;
       left: 10%;
       width: 43%;
-      height: 3px;
+      height: $arrow-width;
       background: setColor(nav-text);
       transform-origin: left bottom;
       transform: rotate(-17deg);
@@ -67,7 +131,73 @@ nav {
       top: 80%;
       right: 10%;
       width: 43%;
-      height: 3px;
+      height: $arrow-width;
+      background: setColor(nav-text);
+      transform-origin: right bottom;
+      transform: rotate(17deg);
+    }
+  }
+
+  @include breakpoint(xs) {
+    width: 20vw;
+    max-width: 90px;
+    height: 20px;
+    .nav__burger__line1 {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      width: 80%;
+      height: $arrow-width;
+      background: setColor(nav-text);
+    }
+    .nav__burger__line2 {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      width: 42.5%;
+      height: $arrow-width;
+      background: setColor(nav-text);
+      transform-origin: left bottom;
+      transform: rotate(-17deg);
+    }
+    .nav__burger__line3 {
+      position: absolute;
+      top: 80%;
+      right: 10%;
+      width: 42.5%;
+      height: $arrow-width;
+      background: setColor(nav-text);
+      transform-origin: right bottom;
+      transform: rotate(17deg);
+    }
+  }
+
+  @include breakpoint(sm) {
+    width: 50px;
+    .nav__burger__line1 {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      width: 80%;
+      height: $arrow-width;
+      background: setColor(nav-text);
+    }
+    .nav__burger__line2 {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      width: 42.5%;
+      height: $arrow-width;
+      background: setColor(nav-text);
+      transform-origin: left bottom;
+      transform: rotate(-17deg);
+    }
+    .nav__burger__line3 {
+      position: absolute;
+      top: 80%;
+      right: 10%;
+      width: 42.5%;
+      height: $arrow-width;
       background: setColor(nav-text);
       transform-origin: right bottom;
       transform: rotate(17deg);

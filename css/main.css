@@ -399,7 +399,7 @@ header .header__face .header__face__img:hover .aaa {
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 nav ul {
@@ -424,6 +424,12 @@ nav ul a {
   color: #b4eddd;
 }
 
+nav input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 @media (max-width: 400px) {
   nav ul {
     width: 100vw;
@@ -437,6 +443,21 @@ nav ul a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  nav ul li {
+    width: 100vw;
+  }
+  nav ul li a {
+    width: 100vw;
+    display: inline-block;
+    text-align: center;
+  }
+  nav ul li label {
+    display: absolute;
+    width: 100vw;
+    height: 50px;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -454,10 +475,58 @@ nav ul a {
         -ms-flex-align: center;
             align-items: center;
   }
+  nav ul li {
+    width: 100vw;
+  }
+  nav ul li a {
+    width: 100vw;
+    display: inline-block;
+    text-align: center;
+  }
+  nav ul li label {
+    display: absolute;
+    width: 100vw;
+    height: 50px;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 701px) {
+  nav {
+    height: 50px;
+  }
+  nav ul {
+    width: 50vw;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    float: right;
+  }
+  nav ul li {
+    width: 11vw;
+  }
+  nav ul li a {
+    width: 11vw;
+    display: inline-block;
+    text-align: center;
+  }
+  nav ul li label {
+    display: absolute;
+    height: 50px;
+    top: 0;
+    left: 0;
+  }
 }
 
 .nav__burger {
   position: relative;
+  margin: 0 auto;
 }
 
 @media (max-width: 400px) {
@@ -470,7 +539,7 @@ nav ul a {
     top: 80%;
     left: 10%;
     width: 80%;
-    height: 3px;
+    height: 2px;
     background: #b4eddd;
   }
   .nav__burger .nav__burger__line2 {
@@ -478,7 +547,7 @@ nav ul a {
     top: 80%;
     left: 10%;
     width: 43%;
-    height: 3px;
+    height: 2px;
     background: #b4eddd;
     -webkit-transform-origin: left bottom;
             transform-origin: left bottom;
@@ -490,7 +559,85 @@ nav ul a {
     top: 80%;
     right: 10%;
     width: 43%;
-    height: 3px;
+    height: 2px;
+    background: #b4eddd;
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: rotate(17deg);
+            transform: rotate(17deg);
+  }
+}
+
+@media (min-width: 401px) {
+  .nav__burger {
+    width: 20vw;
+    max-width: 90px;
+    height: 20px;
+  }
+  .nav__burger .nav__burger__line1 {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #b4eddd;
+  }
+  .nav__burger .nav__burger__line2 {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 42.5%;
+    height: 2px;
+    background: #b4eddd;
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: rotate(-17deg);
+            transform: rotate(-17deg);
+  }
+  .nav__burger .nav__burger__line3 {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    width: 42.5%;
+    height: 2px;
+    background: #b4eddd;
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+    -webkit-transform: rotate(17deg);
+            transform: rotate(17deg);
+  }
+}
+
+@media (min-width: 701px) {
+  .nav__burger {
+    width: 50px;
+  }
+  .nav__burger .nav__burger__line1 {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #b4eddd;
+  }
+  .nav__burger .nav__burger__line2 {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 42.5%;
+    height: 2px;
+    background: #b4eddd;
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: rotate(-17deg);
+            transform: rotate(-17deg);
+  }
+  .nav__burger .nav__burger__line3 {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    width: 42.5%;
+    height: 2px;
     background: #b4eddd;
     -webkit-transform-origin: right bottom;
             transform-origin: right bottom;
