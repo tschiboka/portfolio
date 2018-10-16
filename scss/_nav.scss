@@ -19,6 +19,7 @@ nav {
     li {
       &:hover {
         background: setColor(nav-text);
+
         a {
           color: rgba(0, 0, 0, 0.8);
         }
@@ -31,6 +32,15 @@ nav {
       &:last-child {
         display: flex;
         align-items: center;
+        label {
+          z-index: 10000;
+        }
+
+        &:hover {
+          label {
+            animation: x-popping 0.2s linear 2 forwards;
+          }
+        }
       }
     }
 
@@ -44,8 +54,8 @@ nav {
 
   input {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: -1000px;
+    left: 0;
   }
 
   @include breakpoint(phone) {
@@ -112,9 +122,9 @@ nav {
         &:last-child {
           width: 50px;
         }
-        width: 12.4vw;
+        width: 12.1vw;
         a {
-          width: 12.4vw;
+          width: 12.1vw;
           display: inline-block;
           text-align: center;
         }
@@ -138,6 +148,7 @@ nav {
   @include breakpoint(phone) {
     width: 20vw;
     height: 20px;
+    animation: arrow-up 1s infinite;
     .nav__burger__line1 {
       position: absolute;
       top: 80%;
@@ -172,6 +183,7 @@ nav {
     width: 20vw;
     max-width: 70px;
     height: 20px;
+    animation: arrow-up 1s infinite;
     .nav__burger__line1 {
       position: absolute;
       top: 80%;
@@ -204,6 +216,7 @@ nav {
 
   @include breakpoint(sm) {
     width: 50px;
+    animation: none;
     .nav__burger__line1 {
       position: absolute;
       top: 21px;
@@ -211,7 +224,7 @@ nav {
       width: 30px;
       height: $arrow-width;
       background: setColor(nav-text);
-      visibility: hidden;
+      opacity: 0;
     }
     .nav__burger__line2 {
       position: absolute;
@@ -233,5 +246,122 @@ nav {
       transform-origin: left top;
       transform: rotate(-44.5deg);
     }
+  }
+}
+
+@keyframes x-popping {
+  0% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes arrow-up {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+#nav__checkbox:not(:checked)
+  ~ ul
+  li:last-child
+  .nav__burger
+  .nav__burger__line1 {
+  animation: line1-to-burger 0.3s linear;
+  opacity: 1;
+}
+
+@keyframes line1-to-burger {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#nav__checkbox:not(:checked)
+  ~ ul
+  li:last-child
+  .nav__burger
+  .nav__burger__line2 {
+  animation: line2-to-burger 0.3s linear;
+  transform: rotate(0);
+}
+
+@keyframes line2-to-burger {
+  0% {
+    transform: rotate(44deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+#nav__checkbox:not(:checked)
+  ~ ul
+  li:last-child
+  .nav__burger
+  .nav__burger__line3 {
+  animation: line3-to-burger 0.3s linear;
+  transform: rotate(0);
+}
+
+@keyframes line3-to-burger {
+  0% {
+    transform: rotate(-44deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line1 {
+  animation: line1-to-x 0.3s linear;
+  opacity: 0;
+}
+
+@keyframes line1-to-x {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line2 {
+  animation: line2-to-x 0.3s linear;
+  transform: rotate(44deg);
+}
+
+@keyframes line2-to-x {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(44deg);
+  }
+}
+
+#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line3 {
+  animation: line3-to-x 0.3s linear;
+  transform: rotate(-44deg);
+}
+
+@keyframes line3-to-x {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-44deg);
   }
 }
