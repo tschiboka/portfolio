@@ -400,7 +400,7 @@ header .header__face .header__face__img:hover .aaa {
 
 #nav__checkbox {
   position: absolute;
-  top: 1000px;
+  top: -1000px;
   left: 0;
 }
 
@@ -1048,6 +1048,208 @@ li:last-child
     100% {
       opacity: 1;
       width: 12.1vw;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #nav__checkbox:not(:checked) ~ nav ul {
+    height: 50px;
+    -webkit-animation: nav-ver-out 1s ease-in-out;
+            animation: nav-ver-out 1s ease-in-out;
+  }
+  #nav__checkbox:not(:checked) ~ nav ul li:not(:last-child) {
+    height: 0;
+    opacity: 0;
+    -webkit-animation: li-ver-out 1s ease-in-out;
+            animation: li-ver-out 1s ease-in-out;
+  }
+  #nav__checkbox:not(:checked) ~ nav ul li:last-child {
+    -webkit-transform: scale(-1);
+            transform: scale(-1);
+  }
+  @-webkit-keyframes nav-ver-out {
+    0% {
+      height: 250px;
+    }
+    100% {
+      height: 50px;
+    }
+  }
+  @keyframes nav-ver-out {
+    0% {
+      height: 250px;
+    }
+    100% {
+      height: 50px;
+    }
+  }
+  @-webkit-keyframes li-ver-out {
+    0% {
+      height: 50px;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+  @keyframes li-ver-out {
+    0% {
+      height: 50px;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+  #nav__checkbox:checked ~ nav ul {
+    height: 250px;
+    -webkit-animation: nav-ver-in 1s ease-in-out;
+            animation: nav-ver-in 1s ease-in-out;
+  }
+  #nav__checkbox:checked ~ nav ul li:not(:last-child) {
+    height: 50px;
+    opacity: 1;
+    -webkit-animation: li-ver-in 1s ease-in-out;
+            animation: li-ver-in 1s ease-in-out;
+  }
+  @-webkit-keyframes nav-ver-in {
+    0% {
+      height: 50px;
+    }
+    100% {
+      height: 250px;
+    }
+  }
+  @keyframes nav-ver-in {
+    0% {
+      height: 50px;
+    }
+    100% {
+      height: 250px;
+    }
+  }
+  @-webkit-keyframes li-ver-in {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 50px;
+      opacity: 1;
+    }
+  }
+  @keyframes li-ver-in {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 50px;
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 401px) {
+  #nav__checkbox:not(:checked) ~ nav ul {
+    height: 50px;
+    -webkit-animation: nav-ver-out 1s ease-in-out;
+            animation: nav-ver-out 1s ease-in-out;
+  }
+  #nav__checkbox:not(:checked) ~ nav ul li:not(:last-child) {
+    height: 0;
+    opacity: 0;
+    -webkit-animation: li-ver-out 1s ease-in-out;
+            animation: li-ver-out 1s ease-in-out;
+  }
+  #nav__checkbox:not(:checked) ~ nav ul li:last-child {
+    -webkit-transform: scale(-1);
+            transform: scale(-1);
+  }
+  @-webkit-keyframes nav-ver-out {
+    0% {
+      height: 250px;
+    }
+    100% {
+      height: 50px;
+    }
+  }
+  @keyframes nav-ver-out {
+    0% {
+      height: 250px;
+    }
+    100% {
+      height: 50px;
+    }
+  }
+  @-webkit-keyframes li-ver-out {
+    0% {
+      height: 50px;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+  @keyframes li-ver-out {
+    0% {
+      height: 50px;
+      opacity: 1;
+    }
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+  #nav__checkbox:checked ~ nav ul {
+    height: 250px;
+    -webkit-animation: nav-ver-in 1s ease-in-out;
+            animation: nav-ver-in 1s ease-in-out;
+  }
+  #nav__checkbox:checked ~ nav ul li:not(:last-child) {
+    height: 50px;
+    opacity: 1;
+    -webkit-animation: li-ver-in 1s ease-in-out;
+            animation: li-ver-in 1s ease-in-out;
+  }
+  @-webkit-keyframes nav-ver-in {
+    0% {
+      height: 50px;
+    }
+    100% {
+      height: 250px;
+    }
+  }
+  @keyframes nav-ver-in {
+    0% {
+      height: 50px;
+    }
+    100% {
+      height: 250px;
+    }
+  }
+  @-webkit-keyframes li-ver-in {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 50px;
+      opacity: 1;
+    }
+  }
+  @keyframes li-ver-in {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 50px;
+      opacity: 1;
     }
   }
 }
