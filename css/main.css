@@ -398,6 +398,12 @@ header .header__face .header__face__img:hover .aaa {
   }
 }
 
+#nav__checkbox {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+}
+
 nav {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(15%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(85%, rgba(0, 0, 0, 0.7)), color-stop(95%, rgba(0, 0, 0, 0.5)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7) 85%, rgba(0, 0, 0, 0.5) 95%);
@@ -449,12 +455,6 @@ nav ul a {
   line-height: 50px;
   font-size: 20px;
   color: #b4eddd;
-}
-
-nav input {
-  position: absolute;
-  top: -1000px;
-  left: 0;
 }
 
 @media (max-width: 400px) {
@@ -918,19 +918,73 @@ li:last-child
               transform: rotate(-44deg);
     }
   }
-  /*#nav__checkbox:not(:checked) ~ nav ul li a {
-    animation: navtext-out 0.4s ease-out;
-    opacity: 0;
+  #nav__checkbox:not(:checked) ~ nav {
+    width: 50px;
+    -webkit-animation: nav-hor-out 1s ease-in-out;
+            animation: nav-hor-out 1s ease-in-out;
   }
-
-  @keyframes navtext-out {
+  #nav__checkbox:not(:checked) ~ nav ul {
+    width: 50px;
+    -webkit-animation: nav-hor-out 1s ease-in-out;
+            animation: nav-hor-out 1s ease-in-out;
+  }
+  #nav__checkbox:not(:checked) ~ nav ul li:not(:last-child) {
+    display: none;
+  }
+  @-webkit-keyframes nav-hor-out {
     0% {
-      opacity: 1;
+      width: 55vw;
+    }
+    35% {
+      width: 60vw;
     }
     100% {
-      opacity: 0;
+      width: 50px;
     }
-  }*/
+  }
+  @keyframes nav-hor-out {
+    0% {
+      width: 55vw;
+    }
+    35% {
+      width: 60vw;
+    }
+    100% {
+      width: 50px;
+    }
+  }
+  #nav__checkbox:checked ~ nav {
+    width: 55vw;
+    -webkit-animation: nav-hor-in 1s ease-in-out;
+            animation: nav-hor-in 1s ease-in-out;
+  }
+  #nav__checkbox:checked ~ nav ul {
+    width: 55vw;
+    -webkit-animation: nav-hor-in 1s ease-in-out;
+            animation: nav-hor-in 1s ease-in-out;
+  }
+  @-webkit-keyframes nav-hor-in {
+    0% {
+      width: 50px;
+    }
+    65% {
+      width: 60vw;
+    }
+    100% {
+      width: 55vw;
+    }
+  }
+  @keyframes nav-hor-in {
+    0% {
+      width: 50px;
+    }
+    65% {
+      width: 60vw;
+    }
+    100% {
+      width: 55vw;
+    }
+  }
 }
 
 /*

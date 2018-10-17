@@ -1,5 +1,11 @@
 $arrow-width: 2px;
 
+#nav__checkbox {
+  position: absolute;
+  top: 1000px;
+  left: 0;
+}
+
 nav {
   background: linear-gradient(
     0deg,
@@ -50,12 +56,6 @@ nav {
       font-size: 20px;
       color: setColor(nav-text);
     }
-  }
-
-  input {
-    position: absolute;
-    top: -1000px;
-    left: 0;
   }
 
   @include breakpoint(phone) {
@@ -386,17 +386,46 @@ nav {
     }
   }
 
-  /*#nav__checkbox:not(:checked) ~ nav ul li a {
-    animation: navtext-out 0.4s ease-out;
-    opacity: 0;
+  #nav__checkbox:not(:checked) ~ nav {
+    width: 50px;
+    animation: nav-hor-out 1s ease-in-out;
+    ul {
+      width: 50px;
+      animation: nav-hor-out 1s ease-in-out;
+      li:not(:last-child) {
+        display: none;
+      }
+    }
+    @keyframes nav-hor-out {
+      0% {
+        width: 55vw;
+      }
+      35% {
+        width: 60vw;
+      }
+      100% {
+        width: 50px;
+      }
+    }
   }
 
-  @keyframes navtext-out {
-    0% {
-      opacity: 1;
+  #nav__checkbox:checked ~ nav {
+    width: 55vw;
+    animation: nav-hor-in 1s ease-in-out;
+    ul {
+      width: 55vw;
+      animation: nav-hor-in 1s ease-in-out;
     }
-    100% {
-      opacity: 0;
+    @keyframes nav-hor-in {
+      0% {
+        width: 50px;
+      }
+      65% {
+        width: 60vw;
+      }
+      100% {
+        width: 55vw;
+      }
     }
-  }*/
+  }
 }
