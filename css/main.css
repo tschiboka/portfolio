@@ -545,6 +545,7 @@ nav input {
   }
   nav ul li:last-child {
     width: 50px;
+    margin-left: auto;
   }
   nav ul li a {
     width: 12.1vw;
@@ -740,180 +741,196 @@ nav input {
   }
 }
 
-#nav__checkbox:not(:checked)
-~ ul
+@media (min-width: 701px) {
+  #nav__checkbox:not(:checked)
+~ nav
+ul
 li:last-child
 .nav__burger
 .nav__burger__line1 {
-  -webkit-animation: line1-to-burger 0.3s linear;
-          animation: line1-to-burger 0.3s linear;
-  opacity: 1;
-}
-
-@-webkit-keyframes line1-to-burger {
-  0% {
-    opacity: 0;
-  }
-  100% {
+    -webkit-animation: line1-to-burger 0.3s linear;
+            animation: line1-to-burger 0.3s linear;
     opacity: 1;
   }
-}
-
-@keyframes line1-to-burger {
-  0% {
-    opacity: 0;
+  @-webkit-keyframes line1-to-burger {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
-    opacity: 1;
+  @keyframes line1-to-burger {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-}
-
-#nav__checkbox:not(:checked)
-~ ul
+  #nav__checkbox:not(:checked)
+~ nav
+ul
 li:last-child
 .nav__burger
 .nav__burger__line2 {
-  -webkit-animation: line2-to-burger 0.3s linear;
-          animation: line2-to-burger 0.3s linear;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-@-webkit-keyframes line2-to-burger {
-  0% {
-    -webkit-transform: rotate(44deg);
-            transform: rotate(44deg);
-  }
-  100% {
+    -webkit-animation: line2-to-burger 0.3s linear;
+            animation: line2-to-burger 0.3s linear;
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-}
-
-@keyframes line2-to-burger {
-  0% {
-    -webkit-transform: rotate(44deg);
-            transform: rotate(44deg);
+  @-webkit-keyframes line2-to-burger {
+    0% {
+      -webkit-transform: rotate(44deg);
+              transform: rotate(44deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
   }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+  @keyframes line2-to-burger {
+    0% {
+      -webkit-transform: rotate(44deg);
+              transform: rotate(44deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
   }
-}
-
-#nav__checkbox:not(:checked)
-~ ul
+  #nav__checkbox:not(:checked)
+~ nav
+ul
 li:last-child
 .nav__burger
 .nav__burger__line3 {
-  -webkit-animation: line3-to-burger 0.3s linear;
-          animation: line3-to-burger 0.3s linear;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-@-webkit-keyframes line3-to-burger {
-  0% {
-    -webkit-transform: rotate(-44deg);
-            transform: rotate(-44deg);
-  }
-  100% {
+    -webkit-animation: line3-to-burger 0.3s linear;
+            animation: line3-to-burger 0.3s linear;
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-}
-
-@keyframes line3-to-burger {
-  0% {
-    -webkit-transform: rotate(-44deg);
-            transform: rotate(-44deg);
+  @-webkit-keyframes line3-to-burger {
+    0% {
+      -webkit-transform: rotate(-44deg);
+              transform: rotate(-44deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
   }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+  @keyframes line3-to-burger {
+    0% {
+      -webkit-transform: rotate(-44deg);
+              transform: rotate(-44deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
   }
-}
-
-#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line1 {
-  -webkit-animation: line1-to-x 0.3s linear;
-          animation: line1-to-x 0.3s linear;
-  opacity: 0;
-}
-
-@-webkit-keyframes line1-to-x {
-  0% {
-    opacity: 1;
-  }
-  100% {
+  #nav__checkbox:checked
+~ nav
+ul
+li:last-child
+.nav__burger
+.nav__burger__line1 {
+    -webkit-animation: line1-to-x 0.3s linear;
+            animation: line1-to-x 0.3s linear;
     opacity: 0;
   }
-}
-
-@keyframes line1-to-x {
-  0% {
-    opacity: 1;
+  @-webkit-keyframes line1-to-x {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  100% {
-    opacity: 0;
+  @keyframes line1-to-x {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-}
-
-#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line2 {
-  -webkit-animation: line2-to-x 0.3s linear;
-          animation: line2-to-x 0.3s linear;
-  -webkit-transform: rotate(44deg);
-          transform: rotate(44deg);
-}
-
-@-webkit-keyframes line2-to-x {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
+  #nav__checkbox:checked
+~ nav
+ul
+li:last-child
+.nav__burger
+.nav__burger__line2 {
+    -webkit-animation: line2-to-x 0.3s linear;
+            animation: line2-to-x 0.3s linear;
     -webkit-transform: rotate(44deg);
             transform: rotate(44deg);
   }
-}
-
-@keyframes line2-to-x {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+  @-webkit-keyframes line2-to-x {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(44deg);
+              transform: rotate(44deg);
+    }
   }
-  100% {
-    -webkit-transform: rotate(44deg);
-            transform: rotate(44deg);
+  @keyframes line2-to-x {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(44deg);
+              transform: rotate(44deg);
+    }
   }
-}
-
-#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line3 {
-  -webkit-animation: line3-to-x 0.3s linear;
-          animation: line3-to-x 0.3s linear;
-  -webkit-transform: rotate(-44deg);
-          transform: rotate(-44deg);
-}
-
-@-webkit-keyframes line3-to-x {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
+  #nav__checkbox:checked
+~ nav
+ul
+li:last-child
+.nav__burger
+.nav__burger__line3 {
+    -webkit-animation: line3-to-x 0.3s linear;
+            animation: line3-to-x 0.3s linear;
     -webkit-transform: rotate(-44deg);
             transform: rotate(-44deg);
   }
-}
+  @-webkit-keyframes line3-to-x {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(-44deg);
+              transform: rotate(-44deg);
+    }
+  }
+  @keyframes line3-to-x {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(-44deg);
+              transform: rotate(-44deg);
+    }
+  }
+  /*#nav__checkbox:not(:checked) ~ nav ul li a {
+    animation: navtext-out 0.4s ease-out;
+    opacity: 0;
+  }
 
-@keyframes line3-to-x {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(-44deg);
-            transform: rotate(-44deg);
-  }
+  @keyframes navtext-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }*/
 }
 
 /*

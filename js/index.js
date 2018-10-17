@@ -46,28 +46,3 @@ function vinylArmAnimate() {
     }, 2500);
   });
 } // end of vinylArmAnimate
-
-/*
- * Add scroll listener, so navbar can be sticky even if it's absolute.
- * Thus i'll write my own stycky navbar.
- */
-
-/*listenScroll();
-
-function listenScroll() {
-  const body = document.getElementsByTagName("body")[0];
-  //if () {}
-  window.addEventListener("scroll", () => {
-    const navlist = document.querySelector("nav ul"),
-      navlistTop = navlist.getBoundingClientRect().top,
-      burger = document.querySelector(".nav__burger"),
-      bodyTop = body.getBoundingClientRect().top;
-
-    if (navlistTop < 0) {
-      navlist.style.top = `${Math.abs(bodyTop)}px`;
-      navlist.style.zIndex = "9999";
-    }
-
-    console.log("SCROLLIN", burger);
-  });
-}*/

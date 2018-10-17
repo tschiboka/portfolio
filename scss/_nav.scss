@@ -121,6 +121,7 @@ nav {
       li {
         &:last-child {
           width: 50px;
+          margin-left: auto;
         }
         width: 12.1vw;
         a {
@@ -270,98 +271,132 @@ nav {
   }
 }
 
-#nav__checkbox:not(:checked)
-  ~ ul
-  li:last-child
-  .nav__burger
-  .nav__burger__line1 {
-  animation: line1-to-burger 0.3s linear;
-  opacity: 1;
-}
-
-@keyframes line1-to-burger {
-  0% {
-    opacity: 0;
-  }
-  100% {
+@include breakpoint(sm) {
+  #nav__checkbox:not(:checked)
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line1 {
+    animation: line1-to-burger 0.3s linear;
     opacity: 1;
   }
-}
 
-#nav__checkbox:not(:checked)
-  ~ ul
-  li:last-child
-  .nav__burger
-  .nav__burger__line2 {
-  animation: line2-to-burger 0.3s linear;
-  transform: rotate(0);
-}
-
-@keyframes line2-to-burger {
-  0% {
-    transform: rotate(44deg);
+  @keyframes line1-to-burger {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-  100% {
+
+  #nav__checkbox:not(:checked)
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line2 {
+    animation: line2-to-burger 0.3s linear;
     transform: rotate(0);
   }
-}
 
-#nav__checkbox:not(:checked)
-  ~ ul
-  li:last-child
-  .nav__burger
-  .nav__burger__line3 {
-  animation: line3-to-burger 0.3s linear;
-  transform: rotate(0);
-}
-
-@keyframes line3-to-burger {
-  0% {
-    transform: rotate(-44deg);
+  @keyframes line2-to-burger {
+    0% {
+      transform: rotate(44deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
   }
-  100% {
+
+  #nav__checkbox:not(:checked)
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line3 {
+    animation: line3-to-burger 0.3s linear;
     transform: rotate(0);
   }
-}
 
-#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line1 {
-  animation: line1-to-x 0.3s linear;
-  opacity: 0;
-}
-
-@keyframes line1-to-x {
-  0% {
-    opacity: 1;
+  @keyframes line3-to-burger {
+    0% {
+      transform: rotate(-44deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
   }
-  100% {
+
+  #nav__checkbox:checked
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line1 {
+    animation: line1-to-x 0.3s linear;
     opacity: 0;
   }
-}
 
-#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line2 {
-  animation: line2-to-x 0.3s linear;
-  transform: rotate(44deg);
-}
-
-@keyframes line2-to-x {
-  0% {
-    transform: rotate(0);
+  @keyframes line1-to-x {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  100% {
+
+  #nav__checkbox:checked
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line2 {
+    animation: line2-to-x 0.3s linear;
     transform: rotate(44deg);
   }
-}
 
-#nav__checkbox:checked ~ ul li:last-child .nav__burger .nav__burger__line3 {
-  animation: line3-to-x 0.3s linear;
-  transform: rotate(-44deg);
-}
-
-@keyframes line3-to-x {
-  0% {
-    transform: rotate(0);
+  @keyframes line2-to-x {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(44deg);
+    }
   }
-  100% {
+
+  #nav__checkbox:checked
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line3 {
+    animation: line3-to-x 0.3s linear;
     transform: rotate(-44deg);
   }
+
+  @keyframes line3-to-x {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-44deg);
+    }
+  }
+
+  /*#nav__checkbox:not(:checked) ~ nav ul li a {
+    animation: navtext-out 0.4s ease-out;
+    opacity: 0;
+  }
+
+  @keyframes navtext-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }*/
 }
