@@ -929,7 +929,10 @@ li:last-child
             animation: nav-hor-out 1s ease-in-out;
   }
   #nav__checkbox:not(:checked) ~ nav ul li:not(:last-child) {
-    display: none;
+    width: 0;
+    opacity: 0;
+    -webkit-animation: li-hor-out 1s linear;
+            animation: li-hor-out 1s linear;
   }
   @-webkit-keyframes nav-hor-out {
     0% {
@@ -953,6 +956,36 @@ li:last-child
       width: 50px;
     }
   }
+  @-webkit-keyframes li-hor-out {
+    0% {
+      width: 12.1vw;
+      opacity: 1;
+    }
+    35% {
+      width: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  @keyframes li-hor-out {
+    0% {
+      width: 12.1vw;
+      opacity: 1;
+    }
+    35% {
+      width: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      width: 0;
+    }
+  }
   #nav__checkbox:checked ~ nav {
     width: 55vw;
     -webkit-animation: nav-hor-in 1s ease-in-out;
@@ -962,6 +995,12 @@ li:last-child
     width: 55vw;
     -webkit-animation: nav-hor-in 1s ease-in-out;
             animation: nav-hor-in 1s ease-in-out;
+  }
+  #nav__checkbox:checked ~ nav ul li:not(:last-child) {
+    width: 12.1vw;
+    opacity: 1;
+    -webkit-animation: li-hor-in 1s linear;
+            animation: li-hor-in 1s linear;
   }
   @-webkit-keyframes nav-hor-in {
     0% {
@@ -983,6 +1022,32 @@ li:last-child
     }
     100% {
       width: 55vw;
+    }
+  }
+  @-webkit-keyframes li-hor-in {
+    0% {
+      width: 0;
+    }
+    65% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 12.1vw;
+    }
+  }
+  @keyframes li-hor-in {
+    0% {
+      width: 0;
+    }
+    65% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 12.1vw;
     }
   }
 }

@@ -393,7 +393,9 @@ nav {
       width: 50px;
       animation: nav-hor-out 1s ease-in-out;
       li:not(:last-child) {
-        display: none;
+        width: 0;
+        opacity: 0;
+        animation: li-hor-out 1s linear;
       }
     }
     @keyframes nav-hor-out {
@@ -407,6 +409,22 @@ nav {
         width: 50px;
       }
     }
+
+    @keyframes li-hor-out {
+      0% {
+        width: 12.1vw;
+        opacity: 1;
+      }
+      35% {
+        width: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        width: 0;
+      }
+    }
   }
 
   #nav__checkbox:checked ~ nav {
@@ -415,6 +433,11 @@ nav {
     ul {
       width: 55vw;
       animation: nav-hor-in 1s ease-in-out;
+      li:not(:last-child) {
+        width: 12.1vw;
+        opacity: 1;
+        animation: li-hor-in 1s linear;
+      }
     }
     @keyframes nav-hor-in {
       0% {
@@ -425,6 +448,20 @@ nav {
       }
       100% {
         width: 55vw;
+      }
+    }
+
+    @keyframes li-hor-in {
+      0% {
+        width: 0;
+      }
+      65% {
+        width: 0;
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        width: 12.1vw;
       }
     }
   }
