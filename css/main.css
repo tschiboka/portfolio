@@ -404,9 +404,7 @@ header .header__face .header__face__img:hover .aaa {
 }
 
 #nav__checkbox {
-  position: absolute;
-  top: -1000px;
-  left: 0;
+  display: none;
 }
 
 nav {
@@ -1636,6 +1634,9 @@ footer .love {
   -webkit-transform: scale(1.7);
           transform: scale(1.7);
   text-shadow: 2px 2px 2px black;
+}
+
+footer .throbbing {
   -webkit-animation: throb 0.6s cubic-bezier(0.08, 0.8, 0.32, 0.85) infinite;
           animation: throb 0.6s cubic-bezier(0.08, 0.8, 0.32, 0.85) infinite;
 }

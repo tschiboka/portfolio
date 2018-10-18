@@ -47,9 +47,23 @@ function vinylArmAnimate() {
   });
 } // end of vinylArmAnimate
 
-listenActiveSection();
+/*
+ * SCROLL LISTENER
+ */
+
+window.addEventListener("scroll", () => {
+  listenActiveSection();
+  animateWhenInView();
+}); // end of scrollListener
+
+/*
+ * Navigation bar highlights when the corrisponding section is in view 
+ */
 
 function listenActiveSection() {
+  // function runs only on bigger screen sizes
+  if (window.innerWidth < 700) return void 0;
+
   const header = document.querySelector("header"),
     about = document.querySelector(".about"),
     projects = document.querySelector(".projects"),
@@ -68,18 +82,40 @@ function listenActiveSection() {
     list[sectors.findIndex(e => e === el)].classList.add("active");
   } // end of paintActiveNavLi
 
-  window.addEventListener("scroll", () => {
-    if (window.innerWidth < 700) return void 0;
+  const active = sectors
+    // section is active until reaches its 2/3
+    .map(e => {
+      const rect = e.getBoundingClientRect();
+      return [e, rect.bottom - rect.height / 3];
+    }) // end of map
+    // weed out hte ones that 2/3 is minus and get the first item
+    .filter(e => e[1] > 0)[0][0];
 
-    const active = sectors
-      // section is active until reaches its 2/3
-      .map(e => {
-        const rect = e.getBoundingClientRect();
-        return [e, rect.bottom - rect.height / 3];
-      }) // end of map
-      // weed out hte ones that 2/3 is minus and get the first item
-      .filter(e => e[1] > 0)[0][0];
+  activateNav(active);
+} // end of listenActiveSection
 
-    activateNav(active);
-  }); // end of listenActiveSection
-}
+/*
+ * Spare some computation cost by animating elements only when 
+ * they are in viewport
+ */
+
+function animateWhenInView() {
+  // return true if at least half of the element is visible
+  function isInView(elem) {
+    const rect = elem.getBoundingClientRect(),
+      center = rect.bottom - rect.height / 2;
+
+    return (
+      center >= 0 &&
+      center <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  } // end of isInView
+
+  const heart = document.querySelector(".love");
+
+  if (isInView(heart)) {
+    heart.classList.add("throbbing");
+  } else {
+    heart.classList.remove("throbbing");
+  }
+} // end of animateWhenInView
