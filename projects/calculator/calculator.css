@@ -1,0 +1,85 @@
+body {
+  height:           100%;
+  margin-top:       10vh;
+  background-color: rgb(153, 145, 161);
+  color:            black;
+}
+#calculator {
+  padding-top:      20px;
+  padding-bottom:   20px;
+  margin-top:       5px;
+  text-align:       center;
+  font-family:      Orbitron, monospace;
+  background-color: rgb(29, 28, 31);
+  color:            #222;
+  max-width:        310px;
+  box-shadow:       7px 10px 34px 1px rgba(0, 0, 0, 0.68);
+  border:           1px outset black;
+  border-radius:    15px;
+}
+
+#screen {
+  text-align:       right;
+  background-color: rgb(187, 196, 163);
+  border:           1px outset black;
+  border-radius:    5px;
+  height:           60px;
+}
+
+#display {
+  font-size:        24px;
+  margin-bottom:    0;
+  padding-bottom:   0;
+}
+
+#history {
+  font-size:        12px;
+  margin-top:       0;
+}
+
+#display,
+#history{
+  color:            #111;
+  background-color: rgb(187, 196, 163);
+}
+
+.bttn {
+  margin:           0;
+  padding:          12px;
+  margin-bottom:    10px;
+  min-height:       45px;
+  width:            50px;
+  background-color: rgb(29, 28, 31);
+  color:            rgb(233, 228, 212);
+  border-radius:    3px;
+  font-size:        18px;
+  padding:          0;
+  text-shadow:      -2px -2px #111;
+}
+
+.bttn,
+.bttn:hover,
+.bttn:active,
+.bttn:visited {
+  text-decoration:  none !important;
+  outline:          none !important;
+}
+
+#b-del {
+  color:            rgb(245, 163, 137);
+}
+
+.func {
+  color:            rgb(185, 174, 136);
+}
+
+.black-txt {
+  color:            rgba(220, 220, 220, 0.1);
+  margin:           0;
+  padding:          0;
+  text-shadow:      -2px -2px #111;
+}
+
+.red-txt {
+  color :           rgba(193, 69, 69, 0.2)
+}

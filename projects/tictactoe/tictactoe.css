@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body { background-color: rgb(45, 45, 45); }
+
+#container {
+  background-image: url("http://res.cloudinary.com/tschiboka/image/upload/v1520468800/squared_paper.png");
+  background-repeat: no-repeat;
+  width:        300px;
+  height:       426px;
+  margin-top:   20px;
+  margin-left:  auto;
+  margin-right: auto;
+  padding:      0;
+  font-family: "Indie Flower", sans-serif;
+  font-weight:  bold;
+  color:        #131F43;
+  border:       1px #555 solid;
+  text-align:   center;
+}
+
+#settings {
+  margin:       0;
+  padding:      0;
+  height:       83px;
+}
+
+span { line-height: 28px; }
+
+#play_area {
+  position:     relative;
+  top:          -4px;
+  border-top:   1px solid #131F43;
+  border-bottom:1px solid #131F43;
+  border-collapse: collapse;
+  background-color:rgba(19, 31, 67, 0.1);
+}
+
+td {
+  padding:      0;
+  margin:       0;
+  line-height:  0.0;
+  height:       15.7px;
+  width:        15.7px;
+}
+
+#whos_turn {
+  position:     relative;
+  left:         -70px;
+}
+
+#quit {
+  position:     relative;
+  right:        -70px;
+}
+
+#score {
+  margin:       0;
+  padding-left: 10px;
+  padding-top:  5px;
+  height:       40px;
+  text-align:   left;
+}
+
+#sign {
+  position:    relative;
+  top:         10px;
+  right:       5px;
+  text-align:  right;
+  font-size:   14px;
+}

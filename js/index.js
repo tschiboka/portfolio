@@ -124,3 +124,57 @@ function animateWhenInView() {
     tech.classList.add("open-tech");
   } // end of if tech
 } // end of animateWhenInView
+
+/*
+ * Click event listener for the projects
+ * The event is delegated to the individual proojects
+ */
+
+projectsListener();
+
+function projectsListener() {
+  const projects = document.querySelector(".projects");
+
+  // use only one eventlistener
+  projects.addEventListener("click", function(event) {
+    let target = event.target;
+
+    // target may be the div of text or the description div
+    // so let the target always be the text div with individual id
+    if (target.classList.contains("projects__description")) {
+      // skip text node
+      target =
+        target.firstChild.nodeType === 3
+          ? target.firstChild.nextSibling
+          : target.firstChild;
+    }
+
+    switch (target.id) {
+      case "crayons": {
+        window.open("projects/crayons/crayons.html");
+        break;
+      }
+      case "fruits": {
+        window.open("projects/fruits/match_three.html");
+        break;
+      }
+      case "pomodoro": {
+        window.open("projects/pomodoro/pomodoro.html");
+        break;
+      }
+      case "simon": {
+        window.open("projects/simon/simon.html");
+        break;
+      }
+      case "calculator": {
+        window.open("projects/calculator/calculator.html");
+        break;
+      }
+      case "tic-tac-toe": {
+        window.open("projects/tictactoe/tictactoe.html");
+        break;
+      }
+    }
+    console.log(target);
+  }); // end of eventListener
+} // end of projectsListener

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width = device-width; initial-scale = 1.0" />
+  <title>Simon</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="simon.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="simon.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="keybooard">
+      <div class="row">
+        <div class="col-xs-12 key" id="key-green">
+          &#x25B2;
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 key" id="key-red">
+          &#x25C0;
+        </div>
+        <div class="col-xs-6 key" id="key-yellow">
+          &#x25B6;
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 key" id="key-blue">
+          &#x25BC;
+        </div>
+      </div>
+    </div>
+    <div id="settings-panel">
+    <div id="settings" class="row">
+      <div id="on-off" class="col-xs-4">
+        <div id="on-off-button">
+          OFF
+        </div>
+      </div>
+      <div id="start" class="col-xs-4">
+        <div id="start-button">
+          start &#x25B6;
+        </div>
+      </div>
+      <div id="strict" class="col-xs-4">
+        <div id="strict-button">
+          strict <div id="led"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="20"  aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+  </div>
+  <div id="sign">made w/ &hearts; by Tschiboka</div>
+  </div>
+</body>
+</html>
