@@ -111,11 +111,16 @@ function animateWhenInView() {
     );
   } // end of isInView
 
-  const heart = document.querySelector(".love");
+  const heart = document.querySelector(".love"),
+    tech = document.querySelector(".technologies");
 
   if (isInView(heart)) {
     heart.classList.add("throbbing");
   } else {
     heart.classList.remove("throbbing");
-  }
+  } // end of if heart
+
+  if (isInView(tech)) {
+    tech.classList.add("open-tech");
+  } // end of if tech
 } // end of animateWhenInView

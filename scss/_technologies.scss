@@ -1,5 +1,5 @@
 .technologies {
-  height: 150px;
+  height: 0;
   clip-path: polygon(
     5% 50%,
     3% 10%,
@@ -14,18 +14,21 @@
   justify-content: center;
   align-items: center;
   background: white;
-  animation: technologies-open 0.7s ease-out;
   img {
     width: 80px;
     height: 80px;
     padding: 10px;
   }
 }
+.open-tech {
+  animation: technologies-open 0.7s ease-out;
+  height: 150px;
+}
 @keyframes technologies-open {
   0% {
     height: 0;
   }
   100% {
-    height: 100px;
+    height: 150px;
   }
 }

@@ -1333,7 +1333,7 @@ li:last-child
 }
 
 .technologies {
-  height: 150px;
+  height: 0;
   -webkit-clip-path: polygon(5% 50%, 3% 10%, 97% 10%, 100% 50%, 97% 100%, 3% 100%, 5% 50%);
           clip-path: polygon(5% 50%, 3% 10%, 97% 10%, 100% 50%, 97% 100%, 3% 100%, 5% 50%);
   display: -webkit-box;
@@ -1350,8 +1350,6 @@ li:last-child
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  -webkit-animation: technologies-open 0.7s ease-out;
-          animation: technologies-open 0.7s ease-out;
 }
 
 .technologies img {
@@ -1360,12 +1358,18 @@ li:last-child
   padding: 10px;
 }
 
+.open-tech {
+  -webkit-animation: technologies-open 0.7s ease-out;
+          animation: technologies-open 0.7s ease-out;
+  height: 150px;
+}
+
 @-webkit-keyframes technologies-open {
   0% {
     height: 0;
   }
   100% {
-    height: 100px;
+    height: 150px;
   }
 }
 
@@ -1374,7 +1378,7 @@ li:last-child
     height: 0;
   }
   100% {
-    height: 100px;
+    height: 150px;
   }
 }
 
