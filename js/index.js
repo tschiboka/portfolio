@@ -122,6 +122,9 @@ function animateWhenInView() {
 
   if (isInView(tech)) {
     tech.classList.add("open-tech");
+    [...tech.children].forEach(img => img.classList.add("wobble"));
+  } else {
+    [...tech.children].forEach(img => img.classList.remove("wobble"));
   } // end of if tech
 } // end of animateWhenInView
 
