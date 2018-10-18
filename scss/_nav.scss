@@ -1,4 +1,7 @@
 $arrow-width: 2px;
+.active {
+  color: #fab8f4;
+}
 
 #nav__checkbox {
   position: absolute;
@@ -271,202 +274,6 @@ nav {
   }
 }
 
-@include breakpoint(sm) {
-  #nav__checkbox:not(:checked)
-    ~ nav
-    ul
-    li:last-child
-    .nav__burger
-    .nav__burger__line1 {
-    animation: line1-to-burger 0.3s linear;
-    opacity: 1;
-  }
-
-  @keyframes line1-to-burger {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  #nav__checkbox:not(:checked)
-    ~ nav
-    ul
-    li:last-child
-    .nav__burger
-    .nav__burger__line2 {
-    animation: line2-to-burger 0.3s linear;
-    transform: rotate(0);
-  }
-
-  @keyframes line2-to-burger {
-    0% {
-      transform: rotate(44deg);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
-
-  #nav__checkbox:not(:checked)
-    ~ nav
-    ul
-    li:last-child
-    .nav__burger
-    .nav__burger__line3 {
-    animation: line3-to-burger 0.3s linear;
-    transform: rotate(0);
-  }
-
-  @keyframes line3-to-burger {
-    0% {
-      transform: rotate(-44deg);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
-
-  #nav__checkbox:checked
-    ~ nav
-    ul
-    li:last-child
-    .nav__burger
-    .nav__burger__line1 {
-    animation: line1-to-x 0.3s linear;
-    opacity: 0;
-  }
-
-  @keyframes line1-to-x {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  #nav__checkbox:checked
-    ~ nav
-    ul
-    li:last-child
-    .nav__burger
-    .nav__burger__line2 {
-    animation: line2-to-x 0.3s linear;
-    transform: rotate(44deg);
-  }
-
-  @keyframes line2-to-x {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(44deg);
-    }
-  }
-
-  #nav__checkbox:checked
-    ~ nav
-    ul
-    li:last-child
-    .nav__burger
-    .nav__burger__line3 {
-    animation: line3-to-x 0.3s linear;
-    transform: rotate(-44deg);
-  }
-
-  @keyframes line3-to-x {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(-44deg);
-    }
-  }
-
-  #nav__checkbox:not(:checked) ~ nav {
-    width: 50px;
-    animation: nav-hor-out 1s ease-in-out;
-    ul {
-      width: 50px;
-      animation: nav-hor-out 1s ease-in-out;
-      li:not(:last-child) {
-        width: 0;
-        opacity: 0;
-        animation: li-hor-out 1s linear;
-      }
-    }
-    @keyframes nav-hor-out {
-      0% {
-        width: 55vw;
-      }
-      35% {
-        width: 60vw;
-      }
-      100% {
-        width: 50px;
-      }
-    }
-
-    @keyframes li-hor-out {
-      0% {
-        width: 12.1vw;
-        opacity: 1;
-      }
-      35% {
-        width: 0;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        width: 0;
-      }
-    }
-  }
-
-  #nav__checkbox:checked ~ nav {
-    width: 55vw;
-    animation: nav-hor-in 1s ease-in-out;
-    ul {
-      width: 55vw;
-      animation: nav-hor-in 1s ease-in-out;
-      li:not(:last-child) {
-        width: 12.1vw;
-        opacity: 1;
-        animation: li-hor-in 1s linear;
-      }
-    }
-    @keyframes nav-hor-in {
-      0% {
-        width: 50px;
-      }
-      65% {
-        width: 60vw;
-      }
-      100% {
-        width: 55vw;
-      }
-    }
-
-    @keyframes li-hor-in {
-      0% {
-        width: 0;
-      }
-      65% {
-        width: 0;
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-        width: 12.1vw;
-      }
-    }
-  }
-}
-
 @include breakpoint(phone) {
   #nav__checkbox:not(:checked) ~ nav {
     ul {
@@ -600,6 +407,206 @@ nav {
       100% {
         height: 50px;
         opacity: 1;
+      }
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  #nav__checkbox:not(:checked)
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line1 {
+    animation: line1-to-burger 0.3s linear;
+    opacity: 1;
+  }
+
+  @keyframes line1-to-burger {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  #nav__checkbox:not(:checked)
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line2 {
+    animation: line2-to-burger 0.3s linear;
+    transform: rotate(0);
+  }
+
+  @keyframes line2-to-burger {
+    0% {
+      transform: rotate(44deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  #nav__checkbox:not(:checked)
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line3 {
+    animation: line3-to-burger 0.3s linear;
+    transform: rotate(0);
+  }
+
+  @keyframes line3-to-burger {
+    0% {
+      transform: rotate(-44deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  #nav__checkbox:checked
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line1 {
+    animation: line1-to-x 0.3s linear;
+    opacity: 0;
+  }
+
+  @keyframes line1-to-x {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #nav__checkbox:checked
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line2 {
+    animation: line2-to-x 0.3s linear;
+    transform: rotate(44deg);
+  }
+
+  @keyframes line2-to-x {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(44deg);
+    }
+  }
+
+  #nav__checkbox:checked
+    ~ nav
+    ul
+    li:last-child
+    .nav__burger
+    .nav__burger__line3 {
+    animation: line3-to-x 0.3s linear;
+    transform: rotate(-44deg);
+  }
+
+  @keyframes line3-to-x {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-44deg);
+    }
+  }
+
+  #nav__checkbox:not(:checked) ~ nav {
+    width: 50px;
+    animation: nav-hor-out 1s ease-in-out;
+    ul {
+      width: 50px;
+      height: 50px;
+      animation: nav-hor-out 1s ease-in-out;
+      li:not(:last-child) {
+        width: 0;
+        opacity: 0;
+        animation: li-hor-out 1s linear;
+      }
+    }
+    @keyframes nav-hor-out {
+      0% {
+        width: 55vw;
+      }
+      35% {
+        width: 60vw;
+      }
+      100% {
+        width: 50px;
+      }
+    }
+
+    @keyframes li-hor-out {
+      0% {
+        height: 50px;
+        width: 12.1vw;
+        opacity: 1;
+      }
+      35% {
+        width: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        height: 50px;
+        width: 0;
+      }
+    }
+  }
+
+  #nav__checkbox:checked ~ nav {
+    width: 55vw;
+    animation: nav-hor-in 1s ease-in-out;
+    ul {
+      height: 50px;
+      width: 55vw;
+      animation: nav-hor-in 1s ease-in-out;
+      li:not(:last-child) {
+        width: 12.1vw;
+        opacity: 1;
+        animation: li-hor-in 1s linear;
+      }
+    }
+    @keyframes nav-hor-in {
+      0% {
+        width: 50px;
+      }
+      65% {
+        width: 60vw;
+      }
+      100% {
+        width: 55vw;
+      }
+    }
+
+    @keyframes li-hor-in {
+      0% {
+        width: 0;
+      }
+      65% {
+        width: 0;
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        width: 12.1vw;
       }
     }
   }
