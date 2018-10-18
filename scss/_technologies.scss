@@ -61,31 +61,41 @@
   }
 }
 .open-tech {
-  animation: technologies-open 2s ease-out;
   @include breakpoint(phone) {
     height: 500px;
+    animation: technologies-open-phone 2s ease-out;
   }
   @include breakpoint(xs) {
     height: 400px;
+    animation: technologies-open-xs 2s ease-out;
   }
   @include breakpoint(sm) {
     height: 300px;
+    animation: technologies-open-sm 2s ease-out;
   }
 }
-@keyframes technologies-open {
+@keyframes technologies-open-phone {
   0% {
     height: 0;
   }
   100% {
-    @include breakpoint(phone) {
-      height: 500px;
-    }
-    @include breakpoint(xs) {
-      height: 400px;
-    }
-    @include breakpoint(sm) {
-      height: 300px;
-    }
+    height: 500px;
+  }
+}
+@keyframes technologies-open-xs {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 400px;
+  }
+}
+@keyframes technologies-open-sm {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 300px;
   }
 }
 @keyframes wobble {
