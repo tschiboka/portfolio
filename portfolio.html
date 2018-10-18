@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="header__bg">
             <span class="header__bg--name">Tivadar Debnar</span>
             <br />
@@ -24,25 +24,34 @@
         </div>
         <div class="vinyl-arm"></div>
     </header>
+
     <input id="nav__checkbox" type="checkbox" class="nav__toggle" checked>
+
     <nav>
         <ul>
-            <li><a id="home" class="active" href="#">Home</a></li>
-            <li><a id="about" href="#">About</a></li>
-            <li><a id="projects" href="#">Projects</a></li>
-            <li><a id="contact" href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
             <li>
                 <label for="nav__checkbox">
                     <div class="nav__burger">
                         <div class="nav__burger__line1"></div>
+
                         <div class="nav__burger__line2"></div>
+
                         <div class="nav__burger__line3"></div>
                     </div>
                 </label>
             </li>
         </ul>
     </nav>
-    <p class="about">
+
+    <p class="about" id="about">
         Hello World!
         <br /><br />
         I'm Tivadar Debnar, a self taught (over-caffeinated) junior front-end developer from Hungary,
@@ -57,10 +66,11 @@
 
     <div class="technologies">
         <img src="icons/html_icon.png" alt="html-icon">
+
         <img src="icons/css.png" alt="css-icon">
     </div>
 
-    <div class="projects">
+    <div class="projects" id="projects">
         <div class="img-wrapper">
             <img src="images/crayons.png" alt="crayons - drawings to code">
 
@@ -126,7 +136,7 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         Feel free to contact me regarding employment opportunities,
         or if you are interested on collaborating on a project!
 
