@@ -58,7 +58,7 @@ header {
   .header__bg {
     height: 100%;
     background: rgb(137, 248, 252);
-    background: repeating-linear-gradient(
+    background-image: repeating-linear-gradient(
       60deg,
       rgb(137, 248, 252) 0%,
       rgb(110, 255, 175) 10%

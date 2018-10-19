@@ -130,7 +130,8 @@ function animateWhenInView() {
 
 /*
  * Click event listener for the projects
- * The event is delegated to the individual proojects
+ * The event is delegated to the individual projects
+ * by watching event bubbling up
  */
 
 projectsListener();
@@ -147,10 +148,10 @@ function projectsListener() {
     if (target.classList.contains("projects__description")) {
       // skip text node
       target =
-        target.firstChild.nodeType === 3
-          ? target.firstChild.nextSibling
-          : target.firstChild;
-    }
+        target.firstChild.nodeType === 3 // if textNode
+          ? target.firstChild.nextSibling // check sibling
+          : target.firstChild; // else firstChild
+    } // end of if target is not the text div but descreption wrapper behing
 
     switch (target.id) {
       case "crayons": {
@@ -177,7 +178,69 @@ function projectsListener() {
         window.open("projects/tictactoe/tictactoe.html");
         break;
       }
-    }
-    console.log(target);
+    } // end of swith
   }); // end of eventListener
 } // end of projectsListener
+
+/*
+ * Animate header gradient color with js, I couldn't find a good
+ * implementation in css, so our best friend js to the rescue!
+ * Function returns it's timer so it can be cleared if not in view.
+ */
+
+animateHeaderBgColor(document.querySelector(".header__bg"));
+
+function animateHeaderBgColor(header) {
+  function setGradient(color1, color2) {
+    header.style.background = `-webkit-gradient(linear, left top, right top, from(${color1}), to(${color2}))`;
+    header.style.background = `linear-gradient(90deg, ${color1}, ${color2})`;
+    // changing background to gradient seems to overwrite background
+    // clip to different values thus it needs to be set in every single iteration
+    header.style.backgroundClip = "text";
+    header.style.webkitBackgroundClip = "text";
+  } // end of setGradient
+
+  let i = 0,
+    direction = "up", // i is increasing or decreasing
+    blend1 = [
+      "rgb(137,248,252)",
+      "rgb(148,230,248)",
+      "rgb(158,212,243)",
+      "rgb(169,194,239)",
+      "rgb(180,176,235)",
+      "rgb(191,158,230)",
+      "rgb(201,141,226)",
+      "rgb(212,123,221)",
+      "rgb(223,105,217)",
+      "rgb(234,87,213)",
+      "rgb(244,69,208)",
+      "rgb(255,51,204)"
+    ],
+    blend2 = [
+      "rgb(110,255,175)",
+      "rgb(123,255,173)",
+      "rgb(136,255,171)",
+      "rgb(150,255,169)",
+      "rgb(163,255,167)",
+      "rgb(176,255,165)",
+      "rgb(189,255,163)",
+      "rgb(202,255,161)",
+      "rgb(215,255,159)",
+      "rgb(229,255,157)",
+      "rgb(242,255,155)",
+      "rgb(255,255,153)"
+    ];
+
+  const timer = setInterval(() => {
+    // set i to wave
+    if (i === 11) {
+      direction = "down";
+    }
+    if (i === 0) {
+      direction = "up";
+    }
+    direction === "up" ? i++ : i--;
+
+    setGradient(blend1[i], blend2[i]);
+  }, 100); // end of timer
+} // end of animateHeaderBgColor
