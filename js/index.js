@@ -112,7 +112,8 @@ function animateWhenInView() {
   } // end of isInView
 
   const heart = document.querySelector(".love"),
-    tech = document.querySelector(".technologies");
+    tech = document.querySelector(".technologies"),
+    header = document.querySelector(".header__bg");
 
   if (isInView(heart)) {
     heart.classList.add("throbbing");
@@ -126,6 +127,15 @@ function animateWhenInView() {
   } else {
     [...tech.children].forEach(img => img.classList.remove("wobble"));
   } // end of if tech
+
+  if (isInView(header)) {
+    if (!headerBgIsRuning) {
+      animateHeaderBgColor(document.querySelector(".header__bg"));
+    }
+  } else {
+    clearInterval(timer);
+    headerBgIsRuning = false;
+  }
 } // end of animateWhenInView
 
 /*
@@ -135,6 +145,8 @@ function animateWhenInView() {
  */
 
 projectsListener();
+
+var timer;
 
 function projectsListener() {
   const projects = document.querySelector(".projects");
@@ -190,7 +202,11 @@ function projectsListener() {
 
 animateHeaderBgColor(document.querySelector(".header__bg"));
 
+// this global var is making sure animation and timer won't be called multiple times
+var headerBgIsRuning;
+
 function animateHeaderBgColor(header) {
+  headerBgIsRuning = true;
   function setGradient(color1, color2) {
     header.style.background = `-webkit-gradient(linear, left top, right top, from(${color1}), to(${color2}))`;
     header.style.background = `linear-gradient(90deg, ${color1}, ${color2})`;
@@ -203,35 +219,35 @@ function animateHeaderBgColor(header) {
   let i = 0,
     direction = "up", // i is increasing or decreasing
     blend1 = [
-      "rgb(137,248,252)",
-      "rgb(148,230,248)",
-      "rgb(158,212,243)",
-      "rgb(169,194,239)",
-      "rgb(180,176,235)",
-      "rgb(191,158,230)",
-      "rgb(201,141,226)",
-      "rgb(212,123,221)",
-      "rgb(223,105,217)",
-      "rgb(234,87,213)",
-      "rgb(244,69,208)",
-      "rgb(255,51,204)"
+      "rgb(0,204,255)",
+      "rgb(23,185,241)",
+      "rgb(46,167,227)",
+      "rgb(70,148,213)",
+      "rgb(93,130,199)",
+      "rgb(116,111,185)",
+      "rgb(139,93,172)",
+      "rgb(162,74,158)",
+      "rgb(185,56,144)",
+      "rgb(209,37,130)",
+      "rgb(232,19,116)",
+      "rgb(255,0,102)"
     ],
     blend2 = [
-      "rgb(110,255,175)",
-      "rgb(123,255,173)",
-      "rgb(136,255,171)",
-      "rgb(150,255,169)",
-      "rgb(163,255,167)",
-      "rgb(176,255,165)",
-      "rgb(189,255,163)",
-      "rgb(202,255,161)",
-      "rgb(215,255,159)",
-      "rgb(229,255,157)",
-      "rgb(242,255,155)",
-      "rgb(255,255,153)"
+      "rgb(255,255,153)",
+      "rgb(123,250,168)",
+      "rgb(136,246,162)",
+      "rgb(150,241,155)",
+      "rgb(163,236,148)",
+      "rgb(176,232,142)",
+      "rgb(189,227,135)",
+      "rgb(202,223,129)",
+      "rgb(215,218,122)",
+      "rgb(229,213,115)",
+      "rgb(242,209,109)",
+      "rgb(255,204,102)"
     ];
 
-  const timer = setInterval(() => {
+  timer = setInterval(() => {
     // set i to wave
     if (i === 11) {
       direction = "down";
@@ -239,8 +255,9 @@ function animateHeaderBgColor(header) {
     if (i === 0) {
       direction = "up";
     }
+
     direction === "up" ? i++ : i--;
 
-    setGradient(blend1[i], blend2[i]);
-  }, 100); // end of timer
+    setGradient(blend2[i], blend1[i]);
+  }, 150); // end of timer
 } // end of animateHeaderBgColor
