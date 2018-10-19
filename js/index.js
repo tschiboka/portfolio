@@ -259,5 +259,5 @@ function animateHeaderBgColor(header) {
     direction === "up" ? i++ : i--;
 
     setGradient(blend2[i], blend1[i]);
-  }, 150); // end of timer
+  }, 350); // end of timer
 } // end of animateHeaderBgColor

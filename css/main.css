@@ -214,7 +214,7 @@ header .header__face .aaa {
   left: -30px;
   height: 100px;
   width: 80px;
-  background-image: url(../icons/aaa.png);
+  background-image: url(../images/aaa.png);
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transform: rotate(-45deg);
@@ -274,7 +274,7 @@ header .header__face .header__face__img {
 }
 
 header .header__face .header__face__img:hover {
-  background-image: url(../images/aaa.png);
+  background-image: url(../images/crazy.png);
   -webkit-animation: face-spin 0.7s linear infinite;
           animation: face-spin 0.7s linear infinite;
 }

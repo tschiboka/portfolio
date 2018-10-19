@@ -153,7 +153,7 @@ header {
       left: -30px;
       height: 100px;
       width: 80px;
-      background-image: url(../icons/aaa.png);
+      background-image: url(../images/aaa.png);
       background-repeat: no-repeat;
       background-size: contain;
       transform: rotate(-45deg);
@@ -202,7 +202,7 @@ header {
         -55deg
       ); // 55deg is intentional, bacause the img is not fully vertical
       &:hover {
-        background-image: url(../images/aaa.png);
+        background-image: url(../images/crazy.png);
         animation: face-spin 0.7s linear infinite;
         .aaa {
           opacity: 1;
