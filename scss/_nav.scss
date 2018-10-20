@@ -17,7 +17,6 @@ nav {
     rgba(0, 0, 0, 0.5) 95%
   );
   border-bottom: 2px solid setColor(border);
-  border-left: 2px solid setColor(border);
   border-bottom-left-radius: 5px;
   ul {
     margin: 0;
@@ -60,6 +59,7 @@ nav {
   }
 
   @include breakpoint(phone) {
+    border-left: none;
     ul {
       width: 100vw;
       display: flex;
@@ -84,6 +84,7 @@ nav {
   }
 
   @include breakpoint(xs) {
+    border-left: none;
     ul {
       width: 100vw;
       display: flex;
@@ -108,6 +109,7 @@ nav {
   }
 
   @include breakpoint(sm) {
+    border-left: 2px solid setColor(border);
     position: sticky;
     top: 0;
     height: 50px;
