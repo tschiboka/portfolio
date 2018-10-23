@@ -1605,6 +1605,7 @@ li:last-child
   background: rgba(0, 0, 0, 0.85);
   border-radius: 5px;
   color: #fee6ad;
+  cursor: pointer;
 }
 
 .projects .img-wrapper .projects__description div {
@@ -1612,6 +1613,7 @@ li:last-child
   font-size: 1.2rem;
   text-align: justify;
   opacity: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 400px) {

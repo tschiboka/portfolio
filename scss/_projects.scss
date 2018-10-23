@@ -60,11 +60,13 @@
       background: rgba(0, 0, 0, 0.85);
       border-radius: 5px;
       color: #fee6ad;
+      cursor: pointer;
       div {
         padding: 2vw;
         font-size: 1.2rem;
         text-align: justify;
         opacity: 0;
+        cursor: pointer;
       }
     }
   }
